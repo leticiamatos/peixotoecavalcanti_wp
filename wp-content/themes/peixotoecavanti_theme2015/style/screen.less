@@ -220,7 +220,9 @@ body.header_extended .header{
     background: url(../img/icons/social-plus.png) center no-repeat;
   }
 }
+.more_wpr,
 .contact_wpr{
+  .more_link,
   .contact_link{
     display: inline-block;
     color: @cB;
@@ -229,6 +231,11 @@ body.header_extended .header{
     font-size: 14px;
     text-transform: uppercase;
     font-family: @fontSans;
+  }
+  .more_link{
+    padding: 10px 35px;
+  }
+  .contact_link{
     padding: 7px 8px;
   }
 }
@@ -409,5 +416,47 @@ body.header_extended .header{
       padding: 5px 5px 20px;
       border-bottom: 2px solid @cO;
     }
+  }
+}
+
+// About
+.block_about{
+  background: @cTest;
+  padding-top: 30px;
+  color: @cB;
+  min-height: 1030px;
+
+  .about_text{
+    text-align: center;
+    font-family: @fontSerif;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 920px;
+  }
+
+  .about_cntt{
+    max-width: 1050px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .photo{
+    display: block;
+    img{
+      width: 100%;
+    }
+  }
+  h3{
+    margin-top: 15px;
+  }
+  .about_part01,
+  .about_part02{
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .more_wpr{
+    text-align: center;
+    padding-top: 30px;
   }
 }

@@ -162,19 +162,27 @@
 <!-- ENDS Atuation -->
 
 <!-- BEGINS About Us -->
-<section class="block_wpr block_03 block_atuation">
+<section class="block_wpr block_04 block_about">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_abou); ?></h2>
 		<p class="about_text"><?php postContent( $pg_abou); ?></p>
-		
+
 		<div class="about_cntt">
 			<!-- Marcos de Araújo Cavalcanti -->
 			<div class="col1-2">
-				<p class="photo"><?php postContent( $pg_abo1); ?></p>
-				<p class="about_text"><?php postContent( $pg_abou); ?></p>
-				
+				<p class="photo"><?php postContent( $pg_fab1); ?></p>
+				<h3><?php postTitle( $pg_abo1); ?></h3>
+				<p class="about_part01"><?php postContent( $pg_abo1); ?></p>
 			</div>
-			<div class="col1-2"></div>
+
+			<!-- Romildo Olgo Peixoto Júnior -->
+			<div class="col1-2">
+				<p class="photo"><?php postContent( $pg_fab2); ?></p>
+				<h3><?php postTitle( $pg_abo2); ?></h3>
+				<p class="about_part01"><?php postContent( $pg_abo2); ?></p>
+			</div>
+			<span class="clear"></span>
+			<div class="more_wpr"><a class="more_link" href="#">Leia mais</a></div>
 		</div>
 	</div>
 </section>
