@@ -2,7 +2,16 @@
 	
 
 	$(function () {
-
+        $( "#accordion_01" ).accordion({
+          active: false,
+          heightStyle: "content",
+          collapsible: true
+        });
+        $( "#accordion_02" ).accordion({
+          active: false,
+          heightStyle: "content",
+          collapsible: true
+        });
 	});
 	// Changing Header (normal and extended versions)
 	$(window).scroll(function () {

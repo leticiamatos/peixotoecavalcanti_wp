@@ -73,6 +73,113 @@
 </section>
 <!-- ENDS Office -->
 
+<!-- BEGINS Atuation -->
+<section class="block_wpr block_03 block_atuation">
+	<div class="block_cntt">
+		<h2><?php postTitle( $pg_atua); ?></h2>
+		<p class="atuation_text"><?php postContent( $pg_atua); ?></p>
+
+		<div class="atuation_areas">
+			<!-- Accordion -->
+			<div class="col1-2">
+				<div id="accordion_01">
+
+					<!-- Direito Administrativo -->
+					<h3><?php postTitle( $pg_dadm); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_dadm); ?>
+						</p>
+					</div>
+
+					<!-- Direito Tributário -->
+					<h3><?php postTitle( $pg_dtri); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_dtri); ?>
+						</p>
+					</div>
+
+					<!-- Direito Ambiental -->
+					<h3><?php postTitle( $pg_damb); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_damb); ?>
+						</p>
+					</div>
+
+					<!-- Contencioso Administrativo -->
+					<h3><?php postTitle( $pg_cadm); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_cadm); ?>
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="col1-2">
+				<div id="accordion_02">
+
+					<!-- Contencioso Judicial -->
+					<h3><?php postTitle( $pg_cjud); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_cjud); ?>
+						</p>
+					</div>
+
+					<!-- Direito Civil e do Consumidor -->
+					<h3><?php postTitle( $pg_dciv); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_dciv); ?>
+						</p>
+					</div>
+
+					<!-- Direito Empresarial e Societário -->
+					<h3><?php postTitle( $pg_demp); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_demp); ?>
+						</p>
+					</div>
+
+					<!-- Direito Imobiliário -->
+					<h3><?php postTitle( $pg_dimo); ?></h3>
+					<div>
+						<p>
+						<?php postContent( $pg_dimo); ?>
+						</p>
+					</div>
+
+				</div>
+			</div>
+			<span class="clear"></span>
+		</div>
+	</div>
+</section>
+<!-- ENDS Atuation -->
+
+<!-- BEGINS About Us -->
+<section class="block_wpr block_03 block_atuation">
+	<div class="block_cntt">
+		<h2><?php postTitle( $pg_abou); ?></h2>
+		<p class="about_text"><?php postContent( $pg_abou); ?></p>
+		
+		<div class="about_cntt">
+			<!-- Marcos de Araújo Cavalcanti -->
+			<div class="col1-2">
+				<p class="photo"><?php postContent( $pg_abo1); ?></p>
+				<p class="about_text"><?php postContent( $pg_abou); ?></p>
+				
+			</div>
+			<div class="col1-2"></div>
+		</div>
+	</div>
+</section>
+<!-- ENDS About Us -->
+
 
 	<main role="main">
 		<!-- section -->

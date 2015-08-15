@@ -98,6 +98,9 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/script/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
+        wp_register_script('jquery', get_template_directory_uri() . '/script/jquery-1.9.1.js', array(), '2.7.1'); // Jquery UI
+        wp_enqueue_script('jquery'); // Enqueue it!
+
         wp_register_script('jquerui', get_template_directory_uri() . '/script/jquery-ui-1.10.3.custom.js', array(), '2.7.1'); // Jquery UI
         wp_enqueue_script('jquerui'); // Enqueue it!
 
@@ -509,34 +512,39 @@ function socialMenu(){
     
     // Áreas de Atuação
     $pg_atua = 13;
+    // Direito Administrativo
+    $pg_dadm = 15;
+    // Direito Tributário
+    $pg_dtri = 17;
+    // Direito Ambiental
+    $pg_damb = 19;
     // Contencioso Administrativo
     $pg_cadm = 21;
     // Contencioso Judicial
     $pg_cjud = 23;
-    // Direito Administrativo
-    $pg_dadm = 15;
-    // Direito Ambiental
-    $pg_damb = 19;
     // Direito Civil e do Consumidor
     $pg_dciv = 25;
     // Direito Empresarial e Societário
     $pg_demp = 27;
     // Direito Imobiliário
     $pg_dimo = 29;
-    // Direito Tributário
-    $pg_dtra = 17;
+
+    // Quem Somos
+    $pg_abou = 31;
+    // Marcos de Araújo Cavalcanti
+    $pg_abo1 = 33;
+    // Foto Marcos de Araújo Cavalcanti
+    $pg_fab1 = 79;
+    // Romildo Olgo Peixoto Júnior
+    $pg_abo2 = 35;
+    // Foto Romildo Olgo Peixoto Júnior
+    $pg_fab2 = 76;
     // Contato
     $pg_cont = 42;
     // Notícias e Trabalhos Acadêmicos
     $pg_noti = 40;
     // Parceiros
     $pg_parc = 37;
-    // Quem Somos
-    $pg_abou = 31;
-    // Marcos de Araújo Cavalcanti
-    $pg_abo1 = 33;
-    // Romildo Olgo Peixoto Júnior
-    $pg_abo2 = 35;
 
 // Get Post Content and Title
 

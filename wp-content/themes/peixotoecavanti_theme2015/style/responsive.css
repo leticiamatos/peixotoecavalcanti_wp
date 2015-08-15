@@ -2,5 +2,5 @@
   CSS Stylesheet Área do Aluno
   Author: Letícia Matos | leticiamatos.com 
 ------------------------------------ */
-@media screen and (min-width: 990px) and (max-width: 1909px){.block_wpr{ padding-left:5%;padding-right:5%;width:90%}}@media screen and (max-width: 1910px){.block_cntt{ max-width:1210px;margin-left:auto;margin-right:auto}}
+@media screen and (min-width: 990px) and (max-width: 1909px){.block_wpr{ padding-left:5%;padding-right:5%;width:90%}}@media screen and (max-width: 1910px){.block_cntt{ max-width:1210px;margin-left:auto;margin-right:auto}.col1-2{float:left;width:45%;padding:0 2.5%}}
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

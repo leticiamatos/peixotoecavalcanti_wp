@@ -351,10 +351,6 @@ body.header_extended .header{
   //To do
   .col1-2{
     text-align: justify;
-    float: left;
-    width: 45%;
-    //max-width: 200px;
-    padding: 0 2.5%;
     font-size: 17px;
     line-height: 27px;
     .text_01,
@@ -363,6 +359,55 @@ body.header_extended .header{
     }
     h3{
       padding-bottom: 3px;
+    }
+  }
+}
+
+// Atuation Areas
+.block_atuation{
+  background:#070707 url(../img/bg02_atuation.jpg) center center no-repeat;
+  color: @cB2;
+  //min-height: 830px;
+  min-height: 1047px;
+  h2{
+    padding-top: 70px;
+  }
+
+  .atuation_text{
+    max-width: 920px;
+    font-size: 20px;
+    font-family: @fontSerif;
+    margin: 0 auto;
+    color: @cW;
+    text-align: center;
+  }
+  .atuation_areas{
+    max-width: 1130px;
+    margin: 0 auto;
+
+    h3{
+      font-size: 30px !important;
+      padding: 5px;
+      border-top: 2px solid @cO;
+      border-bottom: 2px solid @cO;
+      margin-top: 50px;
+      background: url(../img/icons/arrowpanel-down.png) right center no-repeat;
+      opacity: 1;
+      .transition;
+    }
+    h3:hover{
+      opacity: 0.7;
+    }
+    .ui-accordion-header-active{
+      background: url(../img/icons/arrowpanel-up.png) right center no-repeat;
+      border-bottom: none;
+    }
+    .ui-accordion-content{
+      font-size: 14px;
+      line-height: 22px;
+      overflow: auto;
+      padding: 5px 5px 20px;
+      border-bottom: 2px solid @cO;
     }
   }
 }
