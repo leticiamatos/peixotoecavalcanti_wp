@@ -1,0 +1,368 @@
+/* ------------------------------------
+  Author: Letícia Matos | leticiamatos.com
+------------------------------------ */ 
+
+/* =============================================================================
+   Variables
+========================================================================== */
+
+  /* Colors */
+  @cW: #fff;
+  @cK:#111;
+  @cO: #F48B39;
+  @cB: #251903;
+  @cB2: #B9AB96;
+  @cB3: #F4F4F4;
+
+  @cBA: rgba(36,25,0,0.9);
+
+  @cTest:rgba(0,255,0,0.5);  
+  
+
+  /* Fonts */
+  @fontRegular: 'Open Sans', sans-serif;
+  @fontSans: 'Montserrat', sans-serif;
+  @fontSerif: 'Sorts Mill Goudy', serif;
+
+
+/* =============================================================================
+   General
+========================================================================== */
+.radius3 (@radius: 3px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.noRadius (@radius: none){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.transition (@transition:0.4s){
+  transition:@transition;
+  -moz-transition:@transition;
+  -webkit-transition:@transition;
+  -o-transition:@transition;
+  -ms-transition:@transition;
+}
+.noTransition (@transition:none){
+  transition:@transition;
+  -moz-transition:@transition;
+  -webkit-transition:@transition;
+  -o-transition:@transition;
+  -ms-transition:@transition;
+}
+.noOpacity{
+  opacity: 1 !important;
+}
+.shadow (@shadow: 3px 3px 2px rgba(0,0,0,0.3)){
+  box-shadow:@shadow !important;
+  -moz-box-shadow:@shadow !important;
+  -webkit-box-shadow:@shadow !important;
+  -o-box-shadow:@shadow !important;
+  -ms-box-shadow:@shadow !important;
+}
+.clear{
+  display: block; 
+  clear: both;
+}
+a{ 
+  color: @cB;
+  .transition;
+}
+a:hover{
+  text-decoration: none; 
+  opacity: 0.6;
+}
+.block_wpr{
+  clear: both;
+  position: relative;
+}
+.block_cntt{
+  position: relative;
+}
+.opacityNone{
+  opacity: 0;
+}
+.displayNone{
+  display: none;
+}
+.relative_wpr{
+  position: relative;
+}
+h2, h3, h4{
+  font-family: @fontSerif;
+}
+h2{
+  text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+h3{
+  font-size: 30px;
+}
+h4{
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+/* Content */
+body{
+  font-family: @fontRegular;
+  font-size: 13px;
+  background: @cW url(../img/z_lixo/home_copy.jpg) top center repeat-x;
+  padding-bottom: 700px;  
+}
+
+/* Header */
+.header{
+  background: @cB;
+  height: 70px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 0;
+  .transition;
+  .shadow;
+  h1{
+    display: inline-block;
+    a{
+      display: block;
+      height: 70px;
+      line-height: 70px;
+    }
+    img{
+      width: 90px;
+      vertical-align: middle;  
+    }
+  }
+  .menu{
+    display: inline-block;
+    font-size: 11px;
+    li{
+      margin: 0 15px;
+    }
+  }
+  .social_wpr{
+    position: absolute;
+    top: 19px;
+    right: 0px;
+  }
+  .contact_wpr{
+    position: absolute;
+    top: 20px;  
+    right: 135px;
+  }
+}
+
+header .menu{
+  li{
+    display: inline-block;
+    font-family: @fontSans;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    a{color: @cB2;}
+  }   
+}
+
+.header_ext{
+  background: @cB;
+  height: 270px;
+  text-align: center;
+  position: relative;
+  h1{
+    padding-top: 15px;
+  }
+  .menu{
+    margin-top: 15px;
+    li{
+      font-size: 12px;
+      margin: 0 14px;
+    }   
+  }
+  .social_wpr{
+    position: absolute;
+    left: 7%;
+    top: 145px;
+  }
+  .contact_wpr{
+    position: absolute;
+    right: 7%;
+    top: 140px;
+  }
+}
+body.header_extended .header{
+   height: 70px;
+}
+
+.social_wpr{
+  .face,
+  .kdin,
+  .plus{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .face{
+    background: url(../img/icons/social-face.png) center no-repeat;
+  }
+  .kdin{
+    background: url(../img/icons/social-in.png) center no-repeat;
+  }
+  .plus{
+    background: url(../img/icons/social-plus.png) center no-repeat;
+  }
+}
+.contact_wpr{
+  .contact_link{
+    display: inline-block;
+    color: @cB;
+    background: @cO;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: @fontSans;
+    padding: 7px 8px;
+  }
+}
+
+// Mission 
+.block_mission{
+  background:#E2D6BE url(../img/bg01_mission.gif) center center no-repeat;
+  height: 860px;
+  .block_cntt{
+    padding-top: 160px;
+    padding-bottom: 20px;
+  }
+  .mission_wpr{
+    background: @cBA;
+    margin: 0 auto;
+    max-width: 590px;
+    padding: 35px 40px;
+    color: @cB2;
+  }
+  h4, blockquote{
+    text-align: center;
+  }
+  blockquote{
+    font-family: @fontSerif;
+    font-size: 32px;
+    line-height: 35px;
+    margin-top: 10px;
+  }
+  .contact_list{
+    margin-top: 20px;
+  }
+  .contact_wpr{
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+.contact_list{
+  width: 330px;
+  padding-left: 40px;
+  margin: 0 auto;
+  color: @cB2;
+  position: relative;
+  li{
+    margin-bottom: 20px;
+  }
+  span{
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    width: 30px;
+  }
+  .ico-01{
+    top: 3px;
+    background: url(../img/icons/contact-comp.png) top center no-repeat;
+  }
+  .ico-02{
+    top: 50px;
+    background: url(../img/icons/contact-phon.png) top center no-repeat;
+  }
+  .ico-03{
+    background: url(../img/icons/contact-emai.png) top center no-repeat;
+    top: 90px;
+  }
+}
+
+// Arrows Navegation
+.navegation{
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+  a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/icons/arrowbig-down.png) center no-repeat;
+    position: relative;
+    top: 0;
+  }
+  a:hover{
+    top: 5px;
+  }
+}
+
+// Office
+.block_office{
+  padding-top: 20px;
+  background: @cB3;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 30px;
+  width: 100% !important;
+  .block_cntt{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .line_01{
+    line-height: 30px;
+    padding-top: 5px;
+    font-size: 23px;
+    font-family: @fontSerif;
+    max-width: 970px;
+    margin:0 auto;
+    text-align: center;
+  }
+  .gallery_wpr{
+    position: relative;
+    height: 380px;
+    margin-top: 20px;
+    background: @cTest;
+  }
+  .office_text{
+    max-width: 1040px;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+  //To do
+  .col1-2{
+    text-align: justify;
+    float: left;
+    width: 45%;
+    //max-width: 200px;
+    padding: 0 2.5%;
+    font-size: 17px;
+    line-height: 27px;
+    .text_01,
+    .text_02{
+      padding-bottom: 35px;
+    }
+    h3{
+      padding-bottom: 3px;
+    }
+  }
+}
