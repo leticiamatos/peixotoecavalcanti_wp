@@ -12,7 +12,12 @@
       heightStyle: "content",
       collapsible: true
     });
-    
+    $( "#archive_accordion" ).accordion({
+      active: false,
+      heightStyle: "content",
+      collapsible: true
+    });
+
     // Vertical Scrolling Navigation
     $.scrollIt({
       upKey: 38,             // key code to navigate to the next section
@@ -30,7 +35,9 @@
       maxSlides: 3,
       moveSlides: 1,
       slideWidth: 585,
-      pager:false
+      pager:false,
+      auto: true,
+      pause: 10000
     });
 
     // Contact Form Modal 

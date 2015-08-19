@@ -565,6 +565,8 @@ function socialMenu(){
     // Foto Romildo Olgo Peixoto Júnior
     $pg_fabout2 = 110;
 
+    // Blog (Page)
+    $pg_blog =  113;
 
 // Get Post Content and Title
 
@@ -578,14 +580,25 @@ function postContent($postId){
 }
 
 function getMenu(){
-  $menu ='<ul>'.
-    '<li class="menu-item"><a data-scroll-nav="2">O Escritório</a></li>'.
-    '<li class="menu-item"><a data-scroll-nav="3">Áreas de Atuação</a></li>'.
-    '<li class="menu-item"><a data-scroll-nav="4">Quem Somos</a></li>'.
-    '<li class="menu-item"><a data-scroll-nav="5">Parceiros</a></li>'.
-    '<li class="menu-item"><a data-scroll-nav="6">Notícas/Artigos</a></li>'.
-    '<li class="menu-item"><a data-scroll-nav="7">Contato</a></li>'.
-  '</ul>';               
+  if ( is_home() ) {
+    $menu ='<ul>'.
+      '<li class="menu-item"><a data-scroll-nav="2">O Escritório</a></li>'.
+      '<li class="menu-item"><a data-scroll-nav="3">Áreas de Atuação</a></li>'.
+      '<li class="menu-item"><a data-scroll-nav="4">Quem Somos</a></li>'.
+      '<li class="menu-item"><a data-scroll-nav="5">Parceiros</a></li>'.
+      '<li class="menu-item"><a data-scroll-nav="6">Notícas/Artigos</a></li>'.
+      '<li class="menu-item"><a data-scroll-nav="7">Contato</a></li>'.
+    '</ul>';
+  } else{
+    $menu ='<ul>'.
+      '<li class="menu-item"><a href="'. home_url() .'/#escritorio">O Escritório</a></li>'.
+      '<li class="menu-item"><a href="'. home_url() .'/#atuacao">Áreas de Atuação</a></li>'.
+      '<li class="menu-item"><a href="'. home_url() .'/#quem-somos">Quem Somos</a></li>'.
+      '<li class="menu-item"><a href="'. home_url() .'/#parceiros">Parceiros</a></li>'.
+      '<li class="menu-item"><a href="'. home_url() .'/#noticias">Notícas/Artigos</a></li>'.
+      '<li class="menu-item"><a href="'. home_url() .'/#contato">Contato</a></li>'.
+    '</ul>';
+  }            
   echo $menu;
 }
 

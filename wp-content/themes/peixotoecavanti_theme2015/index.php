@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- BEGINS Mission -->
-<span data-scroll-index="1" class="target"> </span>
+<span data-scroll-index="1" class="target" id="missao"> </span>
 <section class="block_wpr block_01 block_mission">
 	<div class="block_cntt">
 
@@ -32,7 +32,7 @@
 <!-- ENDS Mission -->
 
 <!-- BEGINS Office -->
-<span data-scroll-index="2" class="target"> </span>
+<span data-scroll-index="2" class="target" id="escritorio"> </span>
 <section class="block_wpr block_02 block_office">
 	<div class="block_cntt">
 		<h2><?php postTitle($pg_escr) ?></h2>
@@ -74,7 +74,7 @@
 <!-- ENDS Office -->
 
 <!-- BEGINS Atuation -->
-<span data-scroll-index="3" class="target"> </span>
+<span data-scroll-index="3" class="target" id="atuacao"> </span>
 <section class="block_wpr block_03 block_atuation">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_atua); ?></h2>
@@ -163,7 +163,7 @@
 <!-- ENDS Atuation -->
 
 <!-- BEGINS About Us -->
-<span data-scroll-index="4" class="target"> </span>
+<span data-scroll-index="4" class="target" id="quem-somos"> </span>
 <section class="block_wpr block_04 block_about">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_abou); ?></h2>
@@ -184,14 +184,14 @@
 				<p class="about_part01"><?php postContent( $pg_abo2); ?></p>
 			</div>
 			<span class="clear"></span>
-			<div class="more_wpr"><a class="more_link" href="<?php echo get_page_link(98); ?>">Leia mais</a></div>
+			<div class="more_wpr"><a class="more_link" href="<?php echo get_page_link($pg_about); ?>">Leia mais</a></div>
 		</div>
 	</div>
 </section>
 <!-- ENDS About Us -->
 
 <!-- BEGINS Partners -->
-<span data-scroll-index="5" class="target"> </span>
+<span data-scroll-index="5" class="target" id="parceiros"> </span>
 <section class="block_wpr block_05 block_partners">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_parc); ?></h2>
@@ -205,16 +205,16 @@
 <!-- ENDS Partners -->
 
 <!-- BEGINS News / Blog -->
-<span data-scroll-index="6" class="target"> </span>
+<span data-scroll-index="6" class="target" id="noticias"> </span>
 <span class="scroll_target"></span>
-<section class="block_wpr block_06 block_blog">
+<section class="block_wpr block_06 block_news">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_noti); ?></h2>
 		<div class="blog_text">
 			<?php postContent( $pg_noti); ?>
 		</div>
 
-		<div class="more_wpr"><a class="more_link" href="#">Ver todas as publicações</a></div>
+		<div class="more_wpr"><a class="more_link" href="<?php echo get_page_link($pg_blog); ?>">Ver todas as publicações</a></div>
 		
 		<section class="blog_wpr">
 			
@@ -222,7 +222,7 @@
 
 		</section>
 		
-		<div class="more_wpr"><a class="more_link" href="#">Ver todas as publicações</a></div>
+		<div class="more_wpr"><a class="more_link" href="<?php echo get_page_link($pg_blog); ?>">Ver todas as publicações</a></div>
 
 	</div>
 	<div class="navegation">
@@ -233,7 +233,7 @@
 <!-- ENDS News / Blog -->
 
 <!-- BEGINS Contact -->
-<?php get_sidebar(); ?>
+<?php get_footer("contact"); ?>
 <!-- ENDS Contact -->
 
 <?php get_footer(); ?>
