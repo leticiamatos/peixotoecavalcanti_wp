@@ -15,6 +15,7 @@
   @cB3: #F4F4F4;
   @cB4: #ded8cd;
   @cG: #F6F6F6;
+  @cGa: #aaa;
 
   @cBA: rgba(36,25,0,0.9);
 
@@ -110,6 +111,14 @@ h3{
 h4{
   text-transform: uppercase;
   font-size: 15px;
+}
+.btn{
+  cursor: pointer;
+  opacity: 1;
+  .transition;
+}
+.btn:hover{
+  opacity: 0.7;
 }
 
 /* Content */
@@ -804,6 +813,276 @@ body.quem-somos{
 }
 
 // Blog (page)
-body.noticias-artigos{
-  background: url(../img/z_lixo/blog_home2.jpg) center 200px no-repeat;
+body.single,
+body.noticias-artigos,
+body.search,
+body.archive{
+  //background: url(../img/z_lixo/blog_home2.jpg) center 200px no-repeat;
+  background: @cG;
+
+  .block_blog{
+    padding-top: 40px;
+    .block_cntt{
+      width: 970px;
+      margin: 0 auto;
+    }
+  }
+
+  .blog_wpr{
+    padding-top: 5px;
+
+    .col_title{
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      font-size: 20px;
+      font-family: @fontSans;
+      color:@cGa;
+    }
+
+    .post{
+      border-top: 2px solid @cK;
+      padding-top: 40px;
+    }
+    .post:first-child{
+      border-top: none;
+      padding-top: 0;
+    }
+    h2.title{
+      font-size: 35px;
+      line-height: 45px;
+      text-align: left;
+      text-transform: capitalize;
+    }
+    .info{
+      margin-top: 5px;
+      border-top: 1px solid @cGa;
+      border-bottom: 1px solid @cGa;
+      padding: 5px 0;
+      color: @cGa;
+      font-size: 14px;
+      text-transform: uppercase;
+      span{
+        display: inline-block;
+      }
+      .author {
+        a{
+          color: @cO;
+        }
+      }
+    }
+    .share_bar{
+      padding-top: 25px;
+      position: relative;
+      height: 40px;
+
+      .bar_title{
+        display: inline-block;
+        color: @cO;
+        font-family: @fontSerif;
+        font-size: 22px;
+        vertical-align: middle;
+      }
+      .share_buttons{
+        padding-left: 20px;
+        vertical-align: middle;
+        display: inline-block;
+        h3{
+          display: none;
+        }
+      }
+      .huge-it-share-buttons-list{
+        li a{
+          height: 25px !important;
+          width: 25px !important;
+        }
+        //Face
+        li:nth-child(1) a{
+          background: url(../img/icons/blog-social-face.png) center no-repeat !important;
+        }
+        //Twitter
+        li:nth-child(2) a{
+          background: url(../img/icons/blog-social-twet.png) center no-repeat !important;
+        }
+        //Google +
+        li:nth-child(4) a{
+          background: url(../img/icons/blog-social-plus.png) center no-repeat !important;
+        }
+        //Linked In
+        li:nth-child(5) a{
+          background: url(../img/icons/blog-social-in.png) center no-repeat !important;
+        }
+      }
+    }
+    .text{
+      padding-top: 15px;
+      padding-bottom: 30px;
+      line-height: 27px;
+      font-size: 16px;  
+
+      .view-article{
+        color: @cO;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .pagination{
+    padding: 30px 0 50px;
+    text-align: center;
+    a{
+      display: block;
+      height: 34px;
+      width: 34px;
+      overflow: hidden;
+      text-indent: 2000px
+    }
+    .next, .prev{
+      display: inline-block;
+      padding: 0 10px;
+    }
+    .next a{
+      background: url(../img/icons/pagination-arrow-left.png) center no-repeat;
+    }
+    .prev a{
+      background: url(../img/icons/pagination-arrow-righ.png) center no-repeat;
+    }
+  }
+}
+
+// Sidebar
+.sidebar{
+  padding-right: 30px;
+  padding-bottom: 100px;
+  .blog_logo{
+    background: @cB;
+    padding: 25px 20px;
+    border: 3px solid @cB2;
+    
+    h2{
+      color: @cO;
+      font-size: 35px;
+      line-height: 35px;
+      a{
+        color: @cO;
+      }
+    }
+  }
+  .form_search{
+    padding-top: 30px;
+
+    .form_div{
+      border-left: 13px @cO solid;
+      padding: 5px;
+      background: @cB2;
+      position: relative;
+    }
+    .txt{
+      background: transparent;
+      font-size: 15px;
+      font-family: @fontSans;
+      color: @cW;
+      width:90%;
+      padding: 5px;
+      border: none;
+    }
+    .btn{
+      background: url(../img/icons/sidebar_seach.png) center no-repeat;
+      overflow: hidden;
+      text-indent: 2000px;
+      border: none;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+    }
+  }
+  .sidebar_title{
+    font-family: @fontSans;
+    font-size: 20px;
+    text-indent: 19px;
+    background: url(../img/icons/sidebar_ico.png) left center no-repeat;
+    text-transform: uppercase;
+  }
+  .category_list{
+    padding-top: 30px;
+
+    ul{
+      border: 3px solid @cK;
+      padding: 2px;
+      background: @cW;
+      margin-top: 5px;
+      li{
+        border-top: 1px solid @cK;
+        margin: 0 5px;
+        a{
+          color: @cK;
+          display: block;
+          padding: 5px 25px;
+          font-family: @fontSerif;
+          font-size: 16px;
+        }
+      }
+      li:first-child{
+        border-top: none;
+      }
+    }
+  }
+  .achieve_list{
+    padding-top: 40px;
+
+    .archive_list{
+      border: 3px solid @cK;
+      background: @cW;
+      padding: 2px;
+      margin-top: 5px;
+    }
+    .ui-accordion-header{
+      font-size: 20px;
+      padding: 5px 7px;
+      margin: 0;
+      background: url(../img/icons/sidebar-arrow-down.png) right center no-repeat;
+      opacity: 1;
+    }
+    .ui-accordion-header:hover{opacity: 0.7;}
+    .ui-state-active{
+      background: url(../img/icons/sidebar-arrow-up.png) right center no-repeat;
+    }
+    .ui-accordion-content{
+      padding:0;
+    }
+    li{
+      border-top: 1px solid @cK;
+      margin: 0 5px;
+      text-transform: capitalize;
+      a{
+        color: @cK;
+        display: block;
+        padding: 5px 25px;
+        font-family: @fontSerif;
+        font-size: 16px;
+      }
+    }
+    li:first-child{
+      border-top: none;
+    }
+  }
+  .contact_wpr{
+    padding-top: 40px;
+  }
+}
+
+// Error
+.error404{
+  .block_error{
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    p{
+      text-align: center;
+      font-family: @fontSans;
+      color: @cGa;
+      font-size: 26px;
+    }
+  }
 }

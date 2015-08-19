@@ -6,19 +6,23 @@
 
 <?php get_header(); ?>
 
-<!-- BEGINS About Us -->
+<!-- BEGINS Blog -->
 <section class="block_wpr block_01 block_blog">
 	<div class="block_cntt">
-		
-		<?php get_sidebar(); ?>
+		<div class="col1-3">
+			<?php get_sidebar(); ?>
+		</div>
+		<div class="col2-3">
+			<section class="blog_wpr">
+				<?php get_template_part('loop'); ?>
+			</section>
+		</div>
 
-		<section class="blog_wpr">
-			<?php get_template_part('loop'); ?>
-		</section>
+		<span class="clear"></span>
 	
 	</div>
 </section>
-<!-- ENDS About Us -->
+<!-- ENDS Blog -->
 
 <?php get_footer("contact"); ?>
 

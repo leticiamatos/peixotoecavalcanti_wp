@@ -1,3 +1,4 @@
+<!-- if is Home -->
 <?php if ( is_home() ) { ?>
 
 <?php 
@@ -32,6 +33,7 @@
 
 <?php endwhile; ?>
 	<span class="clear"></span>
+	<?php wp_reset_postdata(); ?>
 <?php else: ?>
 
 	<!-- article -->
@@ -40,30 +42,41 @@
 	</article>
 	<!-- /article -->
 
-<?php endif; ?> <!-- End if isHome -->
+<?php endif; ?> 
 
-<?php } else { ?>
+<!-- if is Search -->
+<?php } else if ( is_search() ) { ?>
 
+<?php if ( have_posts() ) : ?>
+<?php while ( have_posts() ) : the_post();  ?>
 
-<?php 
-	$args = array(
-		'posts_per_page'   => 5,
-		'post_type'        => 'post',
-		'suppress_filters' => true 
-	);
-	$the_query = new WP_Query( $args ); 
-?>
+		<div class="post">
+			<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+			<div class="info">
+				<span class="date"><?php the_date(); ?> |</span>
+				<span class="author">por <?php the_author_link(); ?></span>
+			</div>
+			<div class="share_bar">
+				<span class="bar_title">Compartilhe</span>
+				<div class="share_buttons">
+					<?php echo do_shortcode("[huge_it_share]"); ?>
+				</div>
 
-<?php if ( $the_query->have_posts() ) : ?>
+			</div>
+			<div class="text">
+				<?php the_excerpt(); ?>
+			</div>
 
-	<!-- the loop -->
-	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		</div>
 
-
-		<h2><?php the_title(); ?></h2>
 
 	<?php endwhile; ?>
 	<!-- end of the loop -->
+
+	<div class="pagination">
+		<div class="next"><?php next_posts_link( 'prox' ); ?></div>
+		<div class="prev"><?php previous_posts_link( 'ant' ); ?></div>
+	</div>
 
 	<?php wp_reset_postdata(); ?>
 
@@ -72,5 +85,60 @@
 <?php endif; ?>
 
 
+<!-- if is any other page -->
+<?php } else { ?>
+
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+  'posts_per_page' => 5,
+  'paged' => $paged
+);
+
+query_posts($args); 
+?>
+
+<?php if ( have_posts() ) : ?>
+<?php while ( have_posts() ) : the_post();  ?>
+
+		<article class="post">
+			<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+			<div class="info">
+				<span class="date"><?php the_date(); ?> |</span>
+				<span class="author">
+					por
+					<a href="#"><?php the_author(); ?></a> 
+				</span>
+
+			</div>
+			<div class="share_bar">
+				<span class="bar_title">Compartilhe</span>
+				<div class="share_buttons">
+					<?php echo do_shortcode("[huge_it_share]"); ?>
+				</div>
+
+			</div>
+			<div class="text">
+				<?php the_excerpt(); ?>
+			</div>
+
+		</article>
+
+
+	<?php endwhile; ?>
+	<!-- end of the loop -->
+
+	<div class="pagination">
+		<div class="next"><?php next_posts_link( 'prox' ); ?></div>
+		<div class="prev"><?php previous_posts_link( 'ant' ); ?></div>
+	</div>
+
+	<?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
 
 <?php } ?>
+

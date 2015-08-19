@@ -27,6 +27,11 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
+		
+		<!-- Google+ -->
+		<script src="https://apis.google.com/js/platform.js" async defer>
+		  {lang: 'pt-BR'}
+		</script>
 
 	</body>
 </html>
