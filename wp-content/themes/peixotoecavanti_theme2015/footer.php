@@ -1,18 +1,20 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+						
+			<!-- BEGINS Footer -->
+			<section class="block_wpr block_footer">
+				<footer class="block_cntt">
+					<div class="footer_wpr">
+						<div class="col1-2">
+							<div class="copyright"><?php bloginfo('name'); ?> &copy; <?php the_time('Y') ?> - Todos os direitos reservados</div>
+						</div>
+						<div class="col1-2">
+							<a href="#" class="layerup-logo" title="Designed by Layer Up"></a>
+						</div>
+						<span class="clear"></span>
+					</div>
+				</footer>
+			</section>
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
-			<!-- /footer -->
-
-		</div>
-		<!-- /wrapper -->
+		</section><!-- .general -->
 
 		<?php wp_footer(); ?>
 

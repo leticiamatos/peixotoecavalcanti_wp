@@ -1,3 +1,49 @@
+<?php if ( is_home() ) { ?>
+
+<?php 
+	$query = new WP_Query( 'posts_per_page=6' );
+
+	$n = 1;
+
+	if (have_posts()): while ($query->have_posts()) : $query->the_post(); 
+	$post_order = "post_".$n;
+	?>
+
+
+	<!-- article -->
+	<div class="post_wpr col1-3 <?php echo $post_order; ?>">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+			<span class="cat"> <?php the_category(); ?></span>
+			<!-- post title -->
+			<h4>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			</h4>
+			<!-- /post title -->
+			<div class="excerpt">
+				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+				<?php //the_excerpt("leia mais" , 40 ); ?> 
+			</div>
+		</article>
+	</div>
+	<!-- /article -->
+
+<?php $n++; ?>
+
+<?php endwhile; ?>
+	<span class="clear"></span>
+<?php else: ?>
+
+	<!-- article -->
+	<article>
+		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+	</article>
+	<!-- /article -->
+
+<?php endif; ?> <!-- End if isHome -->
+
+<?php } else { ?>
+
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<!-- article -->
@@ -41,3 +87,5 @@
 	<!-- /article -->
 
 <?php endif; ?>
+
+<?php } ?>

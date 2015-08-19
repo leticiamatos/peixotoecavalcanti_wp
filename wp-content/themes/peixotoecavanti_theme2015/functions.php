@@ -104,6 +104,12 @@ function html5blank_header_scripts()
         wp_register_script('jquerui', get_template_directory_uri() . '/script/jquery-ui-1.10.3.custom.js', array(), '2.7.1'); // Jquery UI
         wp_enqueue_script('jquerui'); // Enqueue it!
 
+        wp_register_script('scrollIt', get_template_directory_uri() . '/script/scrollIt.js', array(), '2.7.1'); // Scrolling navegation Plugin
+        wp_enqueue_script('scrollIt'); // Enqueue it!
+
+        wp_register_script('bxslider', get_template_directory_uri() . '/script/jquery.bxslider.min.js', array(), '4.1.2'); // Caroussel Images
+        wp_enqueue_script('bxslider'); // Enqueue it!
+
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/script/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
@@ -475,7 +481,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 // Contact Form
 function contactBtn(){
-    return '<div class="contact_wpr"><a class="contact_link" href="#">Fale conosco</a></div>';
+    return '<div class="contact_wpr"><a class="contact_link">Fale conosco</a></div>';
 }
 
 // Social Media Menu
@@ -529,7 +535,7 @@ function socialMenu(){
     // Direito Imobiliário
     $pg_dimo = 29;
 
-    // Quem Somos
+    // Quem Somos (Home)
     $pg_abou = 31;
     // Marcos de Araújo Cavalcanti
     $pg_abo1 = 33;
@@ -539,12 +545,26 @@ function socialMenu(){
     $pg_abo2 = 35;
     // Foto Romildo Olgo Peixoto Júnior
     $pg_fab2 = 76;
-    // Contato
-    $pg_cont = 42;
-    // Notícias e Trabalhos Acadêmicos
-    $pg_noti = 40;
     // Parceiros
     $pg_parc = 37;
+    // Parceiros - Parte 02
+    $pg_par2 = 82;
+    // Notícias e Trabalhos Acadêmicos
+    $pg_noti = 40;
+    // Contato
+    $pg_cont = 42;
+
+    // Quem Somos (Page)
+    $pg_about = 98;
+    // Marcos de Araújo Cavalcanti
+    $pg_about1 = 100;
+    // Foto Marcos de Araújo Cavalcanti
+    $pg_fabout1 = 107;
+    // Romildo Olgo Peixoto Júnior
+    $pg_about2 = 102;
+    // Foto Romildo Olgo Peixoto Júnior
+    $pg_fabout2 = 110;
+
 
 // Get Post Content and Title
 
@@ -555,6 +575,35 @@ function postTitle($postId){
 function postContent($postId){
     $post = get_post( $postId ); 
     echo $post->post_content;
+}
+
+function getMenu(){
+  $menu ='<ul>'.
+    '<li class="menu-item"><a data-scroll-nav="2">O Escritório</a></li>'.
+    '<li class="menu-item"><a data-scroll-nav="3">Áreas de Atuação</a></li>'.
+    '<li class="menu-item"><a data-scroll-nav="4">Quem Somos</a></li>'.
+    '<li class="menu-item"><a data-scroll-nav="5">Parceiros</a></li>'.
+    '<li class="menu-item"><a data-scroll-nav="6">Notícas/Artigos</a></li>'.
+    '<li class="menu-item"><a data-scroll-nav="7">Contato</a></li>'.
+  '</ul>';               
+  echo $menu;
+}
+
+function createGallery($post_id){
+  $post = get_post( $post_id ); 
+  $gallery = get_post_gallery_images( $post ); 
+
+  $image_list = '<ul class="bxslider">';
+
+  // Loop through each image in each gallery
+  foreach( $gallery as $image_url ) {
+
+    $image_list .= '<li>' . '<img src="' . $image_url . '">' . '</li>';
+
+  }
+
+  $image_list .= '</ul>';
+  echo $image_list;
 }
 
 ?> 

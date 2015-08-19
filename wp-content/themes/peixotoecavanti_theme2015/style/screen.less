@@ -13,6 +13,8 @@
   @cB: #251903;
   @cB2: #B9AB96;
   @cB3: #F4F4F4;
+  @cB4: #ded8cd;
+  @cG: #F6F6F6;
 
   @cBA: rgba(36,25,0,0.9);
 
@@ -28,7 +30,7 @@
 /* =============================================================================
    General
 ========================================================================== */
-.radius3 (@radius: 3px){
+.radius8 (@radius: 8px){
   border-radius:@radius !important;
   -moz-border-radius:@radius !important;
   -webkit-border-radius:@radius !important;
@@ -114,8 +116,14 @@ h4{
 body{
   font-family: @fontRegular;
   font-size: 13px;
-  background: @cW url(../img/z_lixo/home_copy.jpg) top center repeat-x;
-  padding-bottom: 700px;  
+  //background: @cW url(../img/z_lixo/home_copy.jpg) top center repeat-x;
+  //padding-bottom: 700px;  
+}
+.target{
+  position: relative;
+  top: -60px;
+  display: block;
+  height: 0;
 }
 
 /* Header */
@@ -167,7 +175,10 @@ header .menu{
     font-family: @fontSans;
     letter-spacing: 1px;
     text-transform: uppercase;
-    a{color: @cB2;}
+    a{
+      color: @cB2;
+      cursor: pointer;
+    }
   }   
 }
 
@@ -231,6 +242,7 @@ body.header_extended .header{
     font-size: 14px;
     text-transform: uppercase;
     font-family: @fontSans;
+    cursor: pointer;
   }
   .more_link{
     padding: 10px 35px;
@@ -313,11 +325,21 @@ body.header_extended .header{
     display: inline-block;
     width: 50px;
     height: 50px;
-    background: url(../img/icons/arrowbig-down.png) center no-repeat;
     position: relative;
+    cursor: pointer;
+  }
+  .btn_up{
+    background: url(../img/icons/arrowbig-up.png) center no-repeat;
+    bottom: 0;
+  }
+  .btn_up:hover{
+    bottom: 5px;
+  }
+  .btn_down{
+    background: url(../img/icons/arrowbig-down.png) center no-repeat;
     top: 0;
   }
-  a:hover{
+  .btn_down:hover{
     top: 5px;
   }
 }
@@ -421,10 +443,10 @@ body.header_extended .header{
 
 // About
 .block_about{
-  background: @cTest;
+  background: @cG;
   padding-top: 30px;
   color: @cB;
-  min-height: 1030px;
+  min-height: 1230px;
 
   .about_text{
     text-align: center;
@@ -458,5 +480,325 @@ body.header_extended .header{
   .more_wpr{
     text-align: center;
     padding-top: 30px;
+  }
+}
+
+// Partners
+.block_partners{
+  background: #433D2F url(../img/bg03_partners.jpg) center no-repeat;
+  color: @cB2;
+  padding-top: 65px;
+  min-height: 915px;
+
+  .partners_text{
+    max-width: 770px;
+    margin: 0 auto;
+  }
+  .line_01{
+    text-align: center;
+    font-family: @fontSerif;
+    font-size: 22px;
+    padding-top: 8px;
+  }
+  .line_02{
+    max-width: 470px;
+    margin: 0 auto;
+    font-size: 17px;
+    padding-top: 38px;
+    text-align: justify;
+    line-height: 30px;
+  }
+
+  .contact_wpr{
+    text-align: center;
+    padding-top: 90px;
+  }
+}
+
+// News and Blogs
+.block_blog{
+  //background: @cTest;
+  background: @cB3;
+  padding-top: 35px;
+  min-height: 1225px;
+  
+  .blog_text{
+    text-align: center;
+    max-width: 800px;
+    font-family: @fontSerif;
+    font-size: 23px;
+    margin: 0 auto;
+    padding-top: 7px;
+    line-height: 31px;
+  }
+  .more_wpr{
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .blog_wpr{
+    max-width: 970px;
+    margin: 0 auto;
+    padding-top: 57px;
+  }
+  .post_wpr{
+    position: relative;
+  }
+  .post_wpr:nth-child(3n+1){
+    clear: both;
+  }
+  .post{
+    background: @cB;
+    padding: 25px 20px;
+    //min-height: 300px;
+    height: 300px;
+    overflow-y: hidden;
+    color: @cB3;
+    margin-bottom: 15px;
+    a{color: @cB3;}
+  }
+  .post-categories{
+    font-size: 16px;
+    a{
+      color: @cB2 !important;
+    }
+  }
+  h4{
+    padding-top: 5px;
+    text-transform: none;
+    font-size: 29px;
+    line-height: 31px;
+    font-family: @fontRegular;
+    a{
+      color: @cO !important;
+    }
+  }
+  .excerpt{
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .view-article{
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+    color: @cO !important;
+    text-transform: uppercase;
+  }
+}
+
+// Contact
+.block_contact{
+  padding-top: 50px;
+  color: @cB3;
+  min-height: 550px;
+  background: #251903 url(../img/bg07_contact.jpg) center center no-repeat;
+
+  .contact_cntt{
+    max-width: 910px;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .social_wpr{
+    padding: 20px 15px;
+  }
+  .contact_wpr{
+    padding: 70px 20px 0;
+  }
+  #googleMap{
+    width: 100%;
+    height: 320px;
+  }
+}
+
+// Footer
+.block_footer{
+  height: 75px;
+  background: @cB;
+  color: @cB3;
+
+  .footer_wpr{
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .copyright{
+    font-style: italic;
+    font-size: 11px;
+    line-height: 75px;
+  }
+  .layerup-logo{
+    float: right;
+    display: inline-block;
+    width: 210px;
+    height: 75px;
+    background: url(../img/footer-layerup-logo.png) center center no-repeat;
+  }
+}
+
+// Image Carousel Gallery 
+.bx-wrapper {
+  position: relative;
+  *zoom: 1;
+}
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(../img/icons/arrowgal-left.png) center no-repeat;
+  .transition;
+}
+.bx-wrapper .bx-prev:hover {
+  left: 5px;
+}
+
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(../img/icons/arrowgal-right.png) center no-repeat;
+}
+.bx-wrapper .bx-next:hover {
+  right: 5px;
+}
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  text-indent: 2000px;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+// Contact Form Modal
+.ui-widget-overlay{
+  background: rgba(255,255,255,0.8);
+  .transition;
+}
+.ui-dialog{
+  background: url(../img/z_lixo/fale_conosco.jpg) center no-repeat;
+}
+.form_contt{
+  color: @cB;
+  .txt{
+    color: @cB;
+    border: 2px solid @cB;
+    padding: 10px;
+    font-size: 15px;
+    text-indent: 45px;
+    margin-bottom: 22px;
+    font-family: @fontRegular;
+    width: 90%;
+    .radius8;
+  }
+  .name .txt{
+    background: url(../img/icons/form_name.png) left center no-repeat;
+  }
+  .email .txt{
+    background: url(../img/icons/form_email.png) left center no-repeat;
+  }
+  .comp .txt{
+    background: url(../img/icons/form_comp.png) left center no-repeat;
+  }
+  .posi .txt{
+    background: url(../img/icons/form_job.png) left center no-repeat;
+  }
+  .msg .txt{
+    background: url(../img/icons/form_msg.png) left 3px no-repeat;
+  }
+  textarea{
+    height: 223px;
+  }
+  .phone_info{
+    padding-top: 10px;
+    span{
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .label{
+      font-size: 16px;
+    }
+    .ico{
+      height: 40px;
+      width: 50px;
+      background: url(../img/icons/form_phone.png) center center no-repeat;
+    }
+    .number{
+      font-size: 20px;
+    }
+  }
+  .buttons{
+    text-align: center;
+  }
+  .btn{
+    text-transform: uppercase;
+    background: @cO url(../img/icons/form_send.png) left center no-repeat;
+    color: @cB;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: @fontRegular;
+    padding: 10px 20px 10px 70px;
+    border: none;
+    .radius8;
+  }
+  .obs{
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+  }
+}
+.ui-dialog-titlebar-close{
+  display: block;
+  background: url(../img/icons/form_close.png);
+  height: 35px !important;
+  width: 35px !important;
+  border: none;
+  right: -13px !important;
+  top: -3px !important;
+}
+.ui-dialog{
+  background: @cW;
+  border: 3px solid @cB2;
+  .radius8;
+}
+
+
+// Quem Somos
+body.quem-somos{
+  background: @cG;
+
+  .block_about{
+    background: none;
+    padding-bottom: 200px;
+  }
+  .about_01,
+  .about_02{
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+
+    h3{
+      padding: 0 30px;
+      font-size: 30px;
+    }
+  }
+  .about_part01,
+  .about_part02{
+    padding: 0 30px 30px;
+  }
+  .about_txt{
+    height: 645px;
+    background: @cB4;
+    color: @cB;
+    overflow-y: scroll;
   }
 }

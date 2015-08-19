@@ -11,10 +11,6 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
-
-		<!-- Default JS Scripts -->
-		<script type="text/javascript" href="<?php get_template_directory_uri(); ?>/script/utils.js"></script>
 
 		<?php wp_head(); ?>
 
@@ -23,15 +19,21 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<section class="general">
 
+		<section class="general">
+			<span data-scroll-index="0" class="target"> </span>
 			<section class="block_wpr header">
 				<!-- Normal Fixed Header -->
 				<div class="relative_wpr">
 					<header class="block_cntt">
-						<h1><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" title="Peixoto & Cavalcanti Advogados" /></a></h1>
+						<h1>
+							<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" title="Peixoto & Cavalcanti Advogados" />
+							</a>
+						</h1>
 						<nav class="menu" role="navigation">
-							<?php html5blank_nav(); ?>
+							<?php //html5blank_nav(); ?>
+							<?php getMenu(); ?>
 						</nav>
 					</header>
 				
@@ -44,7 +46,8 @@
 				<header class="block_cntt">
 					<h1><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/header-exp_logo.png" title="Peixoto & Cavalcanti Advogados" /></a></h1>
 					<nav class="menu" role="navigation">
-						<?php html5blank_nav(); ?>
+						<?php getMenu(); ?>
+						<?php //html5blank_nav(); ?>
 					</nav>
 				</header>
 				

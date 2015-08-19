@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <!-- BEGINS Mission -->
+<span data-scroll-index="1" class="target"> </span>
 <section class="block_wpr block_01 block_mission">
 	<div class="block_cntt">
 
@@ -25,13 +26,13 @@
 	</div>
 
 	<div class="navegation">
-		<!-- To do -->
-		<a href="#" class="btn_down"></a>
+		<a data-scroll-nav="2" class="btn_down"></a>
 	</div>
 </section>
 <!-- ENDS Mission -->
 
 <!-- BEGINS Office -->
+<span data-scroll-index="2" class="target"> </span>
 <section class="block_wpr block_02 block_office">
 	<div class="block_cntt">
 		<h2><?php postTitle($pg_escr) ?></h2>
@@ -41,9 +42,8 @@
 		</p>
 	</div>
 
-	<div class="gallery_wpr">
-		<!-- To do -->
-		<?php postContent( $pg_eimg ); ?>
+	<div id="carousel" class="gallery_wpr">
+		<?php  createGallery( $pg_eimg );  ?> 
 	</div>
 
 	<div class="block_cntt">
@@ -74,6 +74,7 @@
 <!-- ENDS Office -->
 
 <!-- BEGINS Atuation -->
+<span data-scroll-index="3" class="target"> </span>
 <section class="block_wpr block_03 block_atuation">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_atua); ?></h2>
@@ -162,6 +163,7 @@
 <!-- ENDS Atuation -->
 
 <!-- BEGINS About Us -->
+<span data-scroll-index="4" class="target"> </span>
 <section class="block_wpr block_04 block_about">
 	<div class="block_cntt">
 		<h2><?php postTitle( $pg_abou); ?></h2>
@@ -182,24 +184,56 @@
 				<p class="about_part01"><?php postContent( $pg_abo2); ?></p>
 			</div>
 			<span class="clear"></span>
-			<div class="more_wpr"><a class="more_link" href="#">Leia mais</a></div>
+			<div class="more_wpr"><a class="more_link" href="<?php echo get_page_link(98); ?>">Leia mais</a></div>
 		</div>
 	</div>
 </section>
 <!-- ENDS About Us -->
 
+<!-- BEGINS Partners -->
+<span data-scroll-index="5" class="target"> </span>
+<section class="block_wpr block_05 block_partners">
+	<div class="block_cntt">
+		<h2><?php postTitle( $pg_parc); ?></h2>
+		<div class="partners_text">
+			<p class="line_01"><?php postContent( $pg_parc); ?></p>
+			<p class="line_02"><?php postContent( $pg_par2); ?></p>
+		</div>
+		<?php echo contactBtn(); ?>
+	</div>
+</section>
+<!-- ENDS Partners -->
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<!-- BEGINS News / Blog -->
+<span data-scroll-index="6" class="target"> </span>
+<span class="scroll_target"></span>
+<section class="block_wpr block_06 block_blog">
+	<div class="block_cntt">
+		<h2><?php postTitle( $pg_noti); ?></h2>
+		<div class="blog_text">
+			<?php postContent( $pg_noti); ?>
+		</div>
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
-
+		<div class="more_wpr"><a class="more_link" href="#">Ver todas as publicações</a></div>
+		
+		<section class="blog_wpr">
+			
 			<?php get_template_part('loop'); ?>
 
-
 		</section>
-		<!-- /section -->
-	</main>
+		
+		<div class="more_wpr"><a class="more_link" href="#">Ver todas as publicações</a></div>
+
+	</div>
+	<div class="navegation">
+		<a data-scroll-nav="0" class="btn_up"></a>
+	</div>
+
+</section>
+<!-- ENDS News / Blog -->
+
+<!-- BEGINS Contact -->
+<?php get_sidebar(); ?>
+<!-- ENDS Contact -->
 
 <?php get_footer(); ?>
