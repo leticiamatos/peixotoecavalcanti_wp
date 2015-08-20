@@ -54,7 +54,7 @@
 			<!-- Extended Header -->
 			<section class="block_wpr header_ext">
 				<header class="block_cntt">
-					<h1><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/header-exp_logo.png" title="Peixoto & Cavalcanti Advogados" /></a></h1>
+					<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header-exp_logo.png" title="Peixoto & Cavalcanti Advogados" /></a></h1>
 					<nav class="menu" role="navigation">
 						<?php getMenu(); ?>
 						<?php //html5blank_nav(); ?>

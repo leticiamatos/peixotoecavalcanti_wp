@@ -17,7 +17,7 @@
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 				<!-- article -->
-				<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+				<?php //_e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h2 class="title"><?php the_title(); ?></h2>
 					<div class="info">
@@ -28,24 +28,33 @@
 						</span>
 
 					</div>
-					<div class="share_bar">
+					<!--div class="share_bar">
 						<span class="bar_title">Compartilhe</span>
 						<div class="share_buttons">
-							<?php echo do_shortcode("[huge_it_share]"); ?>
+							<?php //echo do_shortcode("[huge_it_share]"); ?>
 						</div>
-					</div>
+					</div-->
 					<div class="text">
 						<?php the_content(); ?>
 					</div>
 
-					<div class="share_bar">
+					<!--div class="share_bar">
 						<span class="bar_title">Compartilhe</span>
 						<div class="share_buttons">
-							<?php echo do_shortcode("[huge_it_share]"); ?>
+							<?php //echo do_shortcode("[huge_it_share]"); ?>
 						</div>
-					</div>
+					</div-->
 					<div class="comments">
 						<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5"></div>
+					</div>
+
+					<div class="pagination">
+						<div class="prev">
+							<?php previous_post(); ?> 
+						</div> 
+						<div class="next">
+							<?php next_post(); ?>
+						</div>
 					</div>
 				</article>
 

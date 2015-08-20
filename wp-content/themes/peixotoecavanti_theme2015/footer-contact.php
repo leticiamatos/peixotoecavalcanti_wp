@@ -52,9 +52,12 @@
 </section>
 
 
-<div id="contact_form" title="">
+<div id="contact_form">
+
 	<div class="form_contt">
-		<form>
+		<?php echo do_shortcode('[contact-form-7 id="118" title="Fale Conosco"]'); ?>
+
+		<!--form>
 			<div class="col1-2">
 				<div class="div_form name">
 					<input type="text" class="txt" placeholder="Nome" />
@@ -85,6 +88,6 @@
 			<div class="obs">
 				*Nós nunca divulgamos seu e-mail para terceiros, e não enviamos SPAM de qualquer natureza.
 			</div>
-		</form>
+		</form-->
 	</div>  
 </div>

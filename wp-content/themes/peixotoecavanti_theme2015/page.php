@@ -1,10 +1,15 @@
+<?php
+/**
+ * Template Name: Page
+ */
+?>
+
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
-
-			<h1><?php the_title(); ?></h1>
+<!-- BEGINS About Us -->
+<section class="block_wpr block_04 block_about">
+	<div class="block_cntt">
+		<h2><?php the_title(); ?></h2>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -12,12 +17,6 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<?php the_content(); ?>
-
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
 
 			</article>
 			<!-- /article -->
@@ -36,10 +35,12 @@
 
 		<?php endif; ?>
 
-		</section>
-		<!-- /section -->
-	</main>
+	</div>
+</section>
+<!-- ENDS About Us -->
 
-<?php get_sidebar(); ?>
+<!-- BEGINS Contact -->
+<?php get_footer("contact"); ?>
+<!-- ENDS Contact -->
 
 <?php get_footer(); ?>

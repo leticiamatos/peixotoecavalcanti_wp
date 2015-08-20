@@ -24,6 +24,9 @@
 </section>
 <!-- ENDS Blog -->
 
+<!-- BEGINS Contact -->
 <?php get_footer("contact"); ?>
+<!-- ENDS Contact -->
+
 
 <?php get_footer(); ?>

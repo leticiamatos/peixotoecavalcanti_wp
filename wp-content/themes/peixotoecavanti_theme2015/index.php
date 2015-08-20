@@ -43,7 +43,7 @@
 	</div>
 
 	<div id="carousel" class="gallery_wpr">
-		<?php  createGallery( $pg_eimg );  ?> 
+		<?php createGallery( $pg_eimg );  ?> 
 	</div>
 
 	<div class="block_cntt">
@@ -217,8 +217,26 @@
 		<div class="more_wpr"><a class="more_link" href="<?php echo get_page_link($pg_blog); ?>">Ver todas as publicações</a></div>
 		
 		<section class="blog_wpr">
-			
+
+			<?php 
+				$query = new WP_Query( 'posts_per_page=6' );
+				$n = 1;
+
+				if (have_posts()): while ($query->have_posts()) : $query->the_post(); 
+				$post_order = "post_".$n;
+			?>
+
 			<?php get_template_part('loop'); ?>
+			
+			<?php $n++; ?>
+
+			<?php endwhile; ?>
+				<span class="clear"></span>
+				<?php wp_reset_postdata(); ?>
+			<?php else: ?>
+				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+			<?php endif; ?> 
+
 
 		</section>
 		
