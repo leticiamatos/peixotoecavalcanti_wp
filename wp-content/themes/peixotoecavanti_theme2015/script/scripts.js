@@ -1,5 +1,26 @@
 (function ($, root, undefined) {
-	
+	  // Responsive debugger script
+  $(document).ready(function(){
+    var MEASUREMENTS_ID = 'measurements'; // abstracted-out for convenience in renaming
+    $("body").append('<div id="'+MEASUREMENTS_ID+'"></div>');
+    $("#"+MEASUREMENTS_ID).css({
+        'position': 'fixed',
+        'bottom': '0',
+        'right': '0',
+        'background-color': 'black',
+        'color': 'white',
+        'padding': '5px',
+        'font-size': '10px',
+        'opacity': '0.4'
+    });
+    getDimensions = function(){
+        return $(window).width() + ' (' + $(document).width() + ') x ' + $(window).height() + ' (' + $(document).height() + ')';
+    }
+    $("#"+MEASUREMENTS_ID).text(getDimensions());
+    $(window).on("resize", function(){
+        $("#"+MEASUREMENTS_ID).text(getDimensions());
+    });
+  });
 
 	$(function () {
     $( "#accordion_01" ).accordion({
@@ -31,7 +52,7 @@
 
     // Office images Carousel
     $('.bxslider').bxSlider({
-      minSlides: 2,
+      minSlides: 1,
       maxSlides: 3,
       moveSlides: 1,
       slideWidth: 585,
@@ -52,6 +73,14 @@
       $( "#contact_form" ).dialog( "open" );
     });
 
+    // Menu Dropdown 
+    $( ".menu_ext_link" ).click(function() {
+      $( ".menu_wpr" ).toggle("blind");
+    });
+    $( ".menu_ext_link" ).click(function() {
+      $( ".menu_ext_wpr" ).toggle("blind");
+    });
+
   });
 	
   // Changing Header (normal and extended versions)
@@ -69,5 +98,6 @@
       }
   });
 
-
 })(jQuery, this);
+
+

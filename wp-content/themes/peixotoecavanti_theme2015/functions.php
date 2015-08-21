@@ -486,13 +486,13 @@ function contactBtn(){
 
 // Social Media Menu
 function socialMenu(){
-    $url_face = "#";
-    $url_kdin = "#";
-    $url_plus = "#";
+    $url_face = "https://www.facebook.com/peixotoecavalcantiadvogados?fref=ts";
+    $url_kdin = "https://www.linkedin.com/company/peixoto-&-cavalcanti-advogados";
+    $url_plus = "https://plus.google.com/u/1/105670109491656469751/about";
     return '<div class="social_wpr">'
-        .'<a href="#" class="face"></a>'
-        .'<a href="#" class="kdin"></a>'
-        .'<a href="#" class="plus"></a>'
+        .'<a href="'. $url_face .'" target="_blank" class="face"></a>'
+        .'<a href="'. $url_kdin .'" target="_blank" class="kdin"></a>'
+        .'<a href="'. $url_plus .'" target="_blank" class="plus"></a>'
     .'</div>';
 
 }

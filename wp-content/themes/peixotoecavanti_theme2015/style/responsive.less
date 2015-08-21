@@ -3,23 +3,469 @@
   Author: Letícia Matos | leticiamatos.com 
 ------------------------------------ */ 
 
+  /* Colors */
+  @cW: #fff;
+  @cK:#111;
+  @cO: #F48B39;
+  @cB: #251903;
+  @cB2: #B9AB96;
+  @cB3: #F4F4F4;
+  @cB4: #ded8cd;
+  @cG: #F6F6F6;
+  @cGa: #aaa;
+
+
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 25px;
+}
+h4{
+  font-size: 13px;
+}
+body{
+  font-size: 13px;
+}
+.header{
+  .block_cntt{
+    line-height:70px;
+  }
+  .menu{
+    font-size: 11px;
+  }
+}
+
+.header_ext{
+  .menu{
+    li{
+      font-size: 12px;
+    }   
+  }
+}
+.more_wpr,
+.contact_wpr{
+  .more_link,
+  .contact_link{
+    font-size: 14px;
+  }
+}
+
+// Mission 
+.block_mission{
+  blockquote{
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+// Office
+.block_office{
+  .line_01{
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .col1-2{
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+.block_atuation{
+  .atuation_text{
+    font-size: 20px;
+  }
+  .atuation_areas{
+    h3{
+      font-size: 25px !important;
+      padding: 10px 10px 7px;
+    }
+    .ui-accordion-content{
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+.block_about{
+
+  .about_text{
+    font-size: 20px;
+  }
+
+  .about_part01,
+  .about_part02{
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+.block_partners{
+  .line_01{
+    font-size: 20px;
+  }
+  .line_02{
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+.block_news{
+  .blog_text{
+    font-size: 20px;
+    line-height: 31px;
+  }
+  h4{
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .excerpt{
+    font-size: 16px;
+  }
+}
+
+.block_footer{
+  .copyright{
+    font-size: 11px;
+    line-height: 75px;
+  }
+}
+
+.form_contt{
+  .txt{
+    font-size: 15px;
+    text-indent: 45px;
+  }
+  .phone_info{
+    .label{
+      font-size: 16px;
+    }
+    .number{
+      font-size: 20px;
+    }
+  }
+  .btn{
+    font-size: 25px;
+  }
+  .obs{
+    font-size: 12px;
+  }
+}
+body.quem-somos{
+  .about_01,
+  .about_02{
+    h3{
+      font-size: 30px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
+body.page,
+body.single,
+body.noticias-artigos,
+body.search,
+body.archive{
+  .blog_wpr{
+    .col_title{
+      font-size: 20px;
+    }
+
+    h2.title{
+      font-size: 35px;
+      line-height: 45px;
+    }
+    .info{
+      font-size: 14px;
+    }
+    .share_bar{
+      .bar_title{
+        font-size: 22px;
+      }
+    }
+    .text{
+      line-height: 27px;
+      font-size: 16px;  
+    }
+  }
+}
+
+.sidebar{
+  .blog_logo{
+    h2{
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+  .form_search{
+    .txt{
+      font-size: 15px;
+    }
+  }
+  .sidebar_title{
+    font-size: 20px;
+    text-indent: 19px;
+  }
+  .category_list{
+    ul{
+      li{
+        a{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .achieve_list{
+    .ui-accordion-header{
+      font-size: 20px;
+    }
+    li{
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Error
+.error404{
+  .block_error{
+    p{
+      font-size: 26px;
+    }
+  }
+}
 
 /* Responsive layout */
 
-//Mobile Vertically oriented
-@media screen and (min-width: 329px){
-// width < 320px
 
+//Mobile Vertically oriented
+@media screen and (max-width: 729px){
+// width < 320px
+  .block_wpr{
+    //background: #0f0;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+    min-width: 300px
+  }
+  .colnopad1-2{
+    width: 100%;
+    float: left;
+  }
+  .col1-2,
+  .col1-3,
+  .col2-3{
+    width: 100%;
+  }
+  .block_mission{
+    blockquote {
+      font-size: 20px !important;
+      line-height: 25px !important;
+    } 
+    .mission_wpr{
+      margin-bottom: 70px;
+    }
+    .block_cntt {
+      padding-top: 50px;
+    }
+  }
+  .contact_list {
+    padding-left: 0;
+    text-align: center;
+    span{
+      display: none;
+    }
+  }
+  h2{
+    font-size: 25px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  h4{
+    font-size: 12px;
+  }
+  body{
+    font-size: 13px;
+  }
+  .more_wpr,
+  .contact_wpr{
+    .more_link,
+    .contact_link{
+      font-size: 10px;
+    }
+  }
+
+  // Mission 
+  .block_mission{
+    blockquote{
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+  // Office
+  .block_office{
+    .line_01{
+      line-height: 23px;
+      font-size: 16px;
+    }
+    .col1-2{
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  .block_atuation{
+    .block_cntt{
+      padding-bottom: 40px;
+    }
+    .atuation_text{
+      line-height: 23px;
+      font-size: 16px;
+    }
+    .atuation_areas{
+      h3{
+        font-size: 20px !important;
+        padding: 10px 50px 7px 10px;
+      }
+      .ui-accordion-content{
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .block_about{
+      padding-bottom: 40px;
+
+    .col1-2{
+      padding-bottom: 30px;
+      .photo{
+        max-width: 480px;
+      }
+    }
+    .about_text{
+      line-height: 23px;
+      font-size: 16px;
+    }
+
+    .about_part01,
+    .about_part02{
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  .block_partners{
+    .line_01{
+      line-height: 23px;
+      font-size: 16px;
+    }
+    .line_02{
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  .block_news{
+    .blog_text{
+      font-size: 16px;
+      line-height: 23px;
+    }
+    h4{
+      font-size: 25px;
+      line-height: 29px;
+    }
+    .excerpt{
+      font-size: 13px;
+    }
+    .block_cntt{
+      padding-bottom: 90px;
+    }
+  }
+
+  .form_contt{
+    .txt{
+      font-size: 15px;
+      text-indent: 45px;
+    }
+    .phone_info{
+      .label{
+        font-size: 16px;
+      }
+      .number{
+        font-size: 20px;
+      }
+    }
+    .btn{
+      font-size: 25px;
+    }
+    .obs{
+      font-size: 12px;
+    }
+  }
+  body.quem-somos{
+    .about_01,
+    .about_02{
+      .photo{
+        max-width: 480px;
+      }
+      h3{
+        font-size: 23px;
+      }
+      p{
+        font-size: 13px;
+      }
+    }
+  }
+
+  body.page,
+  body.single,
+  body.noticias-artigos,
+  body.search,
+  body.archive{
+    .blog_wpr{
+      .col_title{
+        font-size: 16px;
+      }
+
+      h2.title{
+      line-height: 30px;
+      font-size: 25px;
+      }
+      .info{
+        font-size: 13px;
+      }
+      .text{
+        line-height: 19px;
+        font-size: 13px;  
+      }
+    }
+  }
+  .contact_cntt{
+    text-align: center;
+  }
+  .block_contact #googleMap {
+    margin-top: 30px;
+  }
+  .sidebar{
+    display: none;
+  }
+  .block_footer{
+    height: auto;
+    text-align: center;
+  }
+  .block_footer .copyright {
+    font-size: 11px;
+    line-height: normal;
+    padding-top: 30px;
+  }
 }
 
 //Mobile Horizontally oriented
-@media screen and (min-width: 330px) and (max-width: 989px){
-// width < 480px
-
-}
-
-//Tablet Vertically oriented
-@media screen and (min-width: 990px) and (max-width: 1909px){
+@media screen and (min-width: 730px)  and (max-width: 1909px){
 // width < 768px 
 // width > 1024px
 
@@ -29,11 +475,35 @@
     padding-right: 5%;
     width: 90%;
   }
+  .block_cntt{
+    max-width: 1210px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .colnopad1-2{
+    width: 50%;
+    float: left;
+  }
+  .col1-2{
+    float: left;
+    width: 45%;
+    padding: 0 2.5%;
+  }
+  .col1-3{
+    float: left;
+    width: 31.333%;
+    padding: 0 1%;
+  }
+  .col2-3{
+    float: left;
+    width: 64.666%;
+    padding: 0 1%;
+  }
 
 }
 
 //Big Desktops
-@media screen and (max-width: 1910px){
+@media screen and (min-width: 1910px){
 	.block_cntt{
 		max-width: 1210px;
     margin-left: auto;
@@ -59,4 +529,90 @@
     padding: 0 1%;
   }
 
+}
+
+
+// Dropdown (extended) Menu
+@media screen and (max-width: 890px){
+  .header_ext{
+    overflow: visible !important;  
+    height: 190px;
+    .menu_drop{
+      display: inline-block !important;
+      position: absolute;
+      left: 30px;
+      bottom: 5px;
+      z-index: 10;
+    }
+    .block_cntt{
+      line-height: 40px !important;
+    }
+    h1 img{
+      width: 190px !important;
+    }
+    .social_wpr,
+    .contact_wpr{
+      display: none;
+    }
+    .menu {
+      display: none;
+      background: @cB;
+      position: absolute;
+      left: 0;
+      top: 170px;
+      padding: 10px 0 15px;
+      z-index: 10;
+      overflow: hidden;
+      li{
+        display: block;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+
+// Dropdown (min) Menu 
+@media screen and (max-width: 1124px){
+  .header{
+    height: 40px !important;
+    overflow: visible !important;  
+    .menu_drop{
+      display: inline-block !important;
+    }
+    .block_cntt{
+      line-height: 40px !important;
+    }
+    h1 img{
+      width: 50px !important;
+    }
+    .social_wpr,
+    .contact_wpr{
+      display: none;
+    }
+    .menu {
+      display: none;
+      background: @cB;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      padding: 10px 0 15px;
+      overflow: hidden;
+      li{
+        display: block;
+        line-height: 30px;
+      }
+    }
+  }
+  body.header_normal{
+    .header{ display:  none !important;}
+  }
+}
+@media screen and (min-width: 1125px) and (max-width: 1270px){
+  .header{
+    li{
+      letter-spacing: 0 !important;
+      margin: 0 10px !important;
+    }   
+  }
 }

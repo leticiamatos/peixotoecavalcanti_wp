@@ -7,7 +7,7 @@
 							<div class="copyright"><?php bloginfo('name'); ?> &copy; <?php the_time('Y') ?> - Todos os direitos reservados</div>
 						</div>
 						<div class="col1-2">
-							<a href="#" class="layerup-logo" title="Designed by Layer Up"></a>
+							<a href="http://layerup.com.br/" target="_blank" class="layerup-logo" title="Designed by Layer Up"></a>
 						</div>
 						<span class="clear"></span>
 					</div>

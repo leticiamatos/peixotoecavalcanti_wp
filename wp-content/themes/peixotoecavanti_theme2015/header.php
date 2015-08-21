@@ -36,12 +36,15 @@
 				<!-- Normal Fixed Header -->
 				<div class="relative_wpr">
 					<header class="block_cntt">
+						<div class="menu_drop">
+							<a class="menu_link"></a>
+						</div>
 						<h1>
 							<a href="<?php echo home_url(); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" title="Peixoto & Cavalcanti Advogados" />
 							</a>
 						</h1>
-						<nav class="menu" role="navigation">
+						<nav class="menu menu_wpr" role="navigation">
 							<?php //html5blank_nav(); ?>
 							<?php getMenu(); ?>
 						</nav>
@@ -55,11 +58,14 @@
 			<section class="block_wpr header_ext">
 				<header class="block_cntt">
 					<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/header-exp_logo.png" title="Peixoto & Cavalcanti Advogados" /></a></h1>
-					<nav class="menu" role="navigation">
+					<nav class="menu menu_ext_wpr" role="navigation">
 						<?php getMenu(); ?>
 						<?php //html5blank_nav(); ?>
 					</nav>
 				</header>
+				<div class="menu_drop">
+					<a class="menu_ext_link"></a>
+				</div>
 				
 				<?php echo socialMenu(); ?>
 				<?php echo contactBtn(); ?>

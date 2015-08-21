@@ -102,15 +102,12 @@ h2, h3, h4{
 }
 h2{
   text-align: center;
-  font-size: 40px;
   text-transform: uppercase;
 }
 h3{
-  font-size: 28px;
 }
 h4{
   text-transform: uppercase;
-  font-size: 15px;
 }
 .btn{
   cursor: pointer;
@@ -124,7 +121,6 @@ h4{
 /* Content */
 body{
   font-family: @fontRegular;
-  font-size: 13px;
   //background: @cW url(../img/z_lixo/home_copy.jpg) top center repeat-x;
   //padding-bottom: 700px;  
 }
@@ -152,7 +148,6 @@ body{
     a{
       display: block;
       height: 70px;
-      line-height: 70px;
     }
     img{
       width: 90px;
@@ -161,7 +156,6 @@ body{
   }
   .menu{
     display: inline-block;
-    font-size: 11px;
     li{
       margin: 0 15px;
     }
@@ -202,7 +196,6 @@ header .menu{
   .menu{
     margin-top: 15px;
     li{
-      font-size: 12px;
       margin: 0 14px;
     }   
   }
@@ -219,6 +212,23 @@ header .menu{
 }
 body.header_extended .header{
    height: 70px;
+}
+
+// Menu Dropdown
+.menu_drop{
+  display: none;
+  vertical-align: middle;
+  a{
+    background: url(../img/icons/menu.png) center no-repeat;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-bottom:5px;
+    cursor: pointer;
+  }
+}
+body.header_extended .menu_drop{
+  margin-right: 0;
 }
 
 .social_wpr{
@@ -248,7 +258,6 @@ body.header_extended .header{
     color: @cB;
     background: @cO;
     letter-spacing: 1px;
-    font-size: 14px;
     text-transform: uppercase;
     font-family: @fontSans;
     cursor: pointer;
@@ -281,8 +290,6 @@ body.header_extended .header{
   }
   blockquote{
     font-family: @fontSerif;
-    font-size: 32px;
-    line-height: 35px;
     margin-top: 10px;
   }
   .contact_list{
@@ -294,7 +301,7 @@ body.header_extended .header{
   }
 }
 .contact_list{
-  width: 330px;
+  max-width: 330px;
   padding-left: 40px;
   margin: 0 auto;
   color: @cB2;
@@ -367,9 +374,7 @@ body.header_extended .header{
   }
 
   .line_01{
-    line-height: 30px;
     padding-top: 5px;
-    font-size: 21px;
     font-family: @fontSerif;
     max-width: 970px;
     margin:0 auto;
@@ -388,8 +393,6 @@ body.header_extended .header{
   //To do
   .col1-2{
     text-align: justify;
-    font-size: 16px;
-    line-height: 27px;
     .text_01,
     .text_02{
       padding-bottom: 35px;
@@ -412,7 +415,6 @@ body.header_extended .header{
 
   .atuation_text{
     max-width: 920px;
-    font-size: 20px;
     font-family: @fontSerif;
     margin: 0 auto;
     color: @cW;
@@ -423,7 +425,6 @@ body.header_extended .header{
     margin: 0 auto;
 
     h3{
-      font-size: 30px !important;
       padding: 5px;
       border-top: 2px solid @cO;
       border-bottom: 2px solid @cO;
@@ -440,8 +441,6 @@ body.header_extended .header{
       border-bottom: none;
     }
     .ui-accordion-content{
-      font-size: 14px;
-      line-height: 22px;
       overflow: auto;
       padding: 5px 5px 20px;
       border-bottom: 2px solid @cO;
@@ -459,7 +458,6 @@ body.header_extended .header{
   .about_text{
     text-align: center;
     font-family: @fontSerif;
-    font-size: 20px;
     padding-top: 10px;
     margin: 0 auto;
     max-width: 920px;
@@ -482,7 +480,6 @@ body.header_extended .header{
   .about_part01,
   .about_part02{
     text-align: justify;
-    font-size: 18px;
     padding-top: 10px;
   }
   .more_wpr{
@@ -496,7 +493,7 @@ body.header_extended .header{
   background: #433D2F url(../img/bg03_partners.jpg) center no-repeat;
   color: @cB2;
   padding-top: 65px;
-  min-height: 915px;
+  min-height: 765px;
 
   .partners_text{
     max-width: 770px;
@@ -505,16 +502,13 @@ body.header_extended .header{
   .line_01{
     text-align: center;
     font-family: @fontSerif;
-    font-size: 22px;
     padding-top: 8px;
   }
   .line_02{
     max-width: 470px;
     margin: 0 auto;
-    font-size: 17px;
     padding-top: 38px;
     text-align: justify;
-    line-height: 30px;
   }
 
   .contact_wpr{
@@ -534,10 +528,8 @@ body.header_extended .header{
     text-align: center;
     max-width: 800px;
     font-family: @fontSerif;
-    font-size: 23px;
     margin: 0 auto;
     padding-top: 7px;
-    line-height: 31px;
   }
   .more_wpr{
     text-align: center;
@@ -566,7 +558,6 @@ body.header_extended .header{
     a{color: @cB3;}
   }
   .post-categories{
-    font-size: 16px;
     a{
       color: @cB2 !important;
     }
@@ -574,15 +565,12 @@ body.header_extended .header{
   h4{
     padding-top: 5px;
     text-transform: none;
-    font-size: 29px;
-    line-height: 31px;
     font-family: @fontRegular;
     a{
       color: @cO !important;
     }
   }
   .excerpt{
-    font-size: 16px;
     padding-top: 10px;
   }
   .view-article{
@@ -631,8 +619,6 @@ body.header_extended .header{
   }
   .copyright{
     font-style: italic;
-    font-size: 11px;
-    line-height: 75px;
   }
   .layerup-logo{
     float: right;
@@ -652,6 +638,7 @@ body.header_extended .header{
 .bx-wrapper img {
   max-width: 100%;
   display: block;
+  max-height: 380px
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
@@ -700,7 +687,6 @@ body.header_extended .header{
     color: @cB;
     border: 2px solid @cB;
     padding: 10px;
-    font-size: 15px;
     text-indent: 45px;
     margin-bottom: 22px;
     font-family: @fontRegular;
@@ -732,7 +718,6 @@ body.header_extended .header{
       display: inline-block;
     }
     .label{
-      font-size: 16px;
     }
     .ico{
       height: 40px;
@@ -740,7 +725,6 @@ body.header_extended .header{
       background: url(../img/icons/form_phone.png) center center no-repeat;
     }
     .number{
-      font-size: 20px;
     }
   }
   .buttons{
@@ -750,7 +734,6 @@ body.header_extended .header{
     text-transform: uppercase;
     background: @cO url(../img/icons/form_send.png) left center no-repeat;
     color: @cB;
-    font-size: 25px;
     font-weight: bold;
     font-family: @fontRegular;
     padding: 10px 20px 10px 70px;
@@ -761,7 +744,6 @@ body.header_extended .header{
     clear: both;
     text-align: center;
     padding: 20px 0;
-    font-size: 12px;
   }
 }
 .ui-dialog-titlebar-close{
@@ -804,8 +786,8 @@ body.quem-somos{
 
     h3{
       padding: 0 30px;
-      font-size: 30px;
     }
+
   }
   .about_part01,
   .about_part02{
@@ -831,7 +813,7 @@ body.archive{
   .block_blog{
     padding-top: 40px;
     .block_cntt{
-      width: 970px;
+      max-width: 970px;
       margin: 0 auto;
     }
   }
@@ -842,7 +824,6 @@ body.archive{
     .col_title{
       text-transform: uppercase;
       padding-bottom: 20px;
-      font-size: 20px;
       font-family: @fontSans;
       color:@cGa;
     }
@@ -856,8 +837,6 @@ body.archive{
       padding-top: 0;
     }
     h2.title{
-      font-size: 35px;
-      line-height: 45px;
       text-align: left;
       text-transform: capitalize;
     }
@@ -867,7 +846,6 @@ body.archive{
       border-bottom: 1px solid @cGa;
       padding: 5px 0;
       color: @cGa;
-      font-size: 14px;
       text-transform: uppercase;
       span{
         display: inline-block;
@@ -887,7 +865,6 @@ body.archive{
         display: inline-block;
         color: @cO;
         font-family: @fontSerif;
-        font-size: 22px;
         vertical-align: middle;
       }
       .share_buttons{
@@ -924,8 +901,6 @@ body.archive{
     .text{
       padding-top: 15px;
       padding-bottom: 30px;
-      line-height: 27px;
-      font-size: 16px;  
 
       .view-article{
         color: @cO;
@@ -982,8 +957,6 @@ body.single{
     
     h2{
       color: @cO;
-      font-size: 35px;
-      line-height: 35px;
       a{
         color: @cO;
       }
@@ -1000,7 +973,6 @@ body.single{
     }
     .txt{
       background: transparent;
-      font-size: 15px;
       font-family: @fontSans;
       color: @cW;
       width:90%;
@@ -1022,7 +994,6 @@ body.single{
   }
   .sidebar_title{
     font-family: @fontSans;
-    font-size: 20px;
     text-indent: 19px;
     background: url(../img/icons/sidebar_ico.png) left center no-repeat;
     text-transform: uppercase;
@@ -1043,7 +1014,6 @@ body.single{
           display: block;
           padding: 5px 25px;
           font-family: @fontSerif;
-          font-size: 16px;
         }
       }
       li:first-child{
@@ -1061,7 +1031,6 @@ body.single{
       margin-top: 5px;
     }
     .ui-accordion-header{
-      font-size: 20px;
       padding: 5px 7px;
       margin: 0;
       background: url(../img/icons/sidebar-arrow-down.png) right center no-repeat;
@@ -1083,7 +1052,6 @@ body.single{
         display: block;
         padding: 5px 25px;
         font-family: @fontSerif;
-        font-size: 16px;
       }
     }
     li:first-child{
@@ -1105,7 +1073,6 @@ body.single{
       text-align: center;
       font-family: @fontSans;
       color: @cGa;
-      font-size: 26px;
     }
   }
 }
