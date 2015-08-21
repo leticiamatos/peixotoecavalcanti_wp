@@ -74,7 +74,7 @@
     });
 
     // Menu Dropdown 
-    $( ".menu_ext_link" ).click(function() {
+    $( ".menu_link" ).click(function() {
       $( ".menu_wpr" ).toggle("blind");
     });
     $( ".menu_ext_link" ).click(function() {

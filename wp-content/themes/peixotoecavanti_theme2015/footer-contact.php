@@ -19,7 +19,7 @@
 				<?php echo socialMenu(); ?>
 				<?php echo contactBtn(); ?>
 			</div>
-			<div class="col1-2">
+			<!--div class="col1-2">
 				<script src="https://maps.googleapis.com/maps/api/js"></script>
 		    <script>
 					var myCenter=new google.maps.LatLng(-15.792733,-47.893937);
@@ -42,7 +42,7 @@
 					}
 
 					google.maps.event.addDomListener(window, 'load', initialize);
-		    </script>
+		    </script-->
 
 		    <div id="googleMap"></div>
 			</div>

@@ -189,6 +189,16 @@ body.archive{
       font-size: 16px;  
     }
   }
+  .pagination{
+    .next, .prev{
+      span{
+        font-size: 13px;
+      }
+      a{
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .sidebar{
@@ -248,7 +258,7 @@ body.archive{
     padding-left: 10%;
     padding-right: 10%;
     width: 80%;
-    min-width: 300px
+    min-width: 180px;
   }
   .colnopad1-2{
     width: 100%;
@@ -464,6 +474,14 @@ body.archive{
   }
 }
 
+// Blog Title "Notícias/Artigos"
+@media screen and (min-width: 730px)  and (max-width: 940px){
+  .sidebar .blog_logo h2{
+    font-size: 23px !important;
+  }
+
+}
+
 //Mobile Horizontally oriented
 @media screen and (min-width: 730px)  and (max-width: 1909px){
 // width < 768px 
@@ -499,7 +517,6 @@ body.archive{
     width: 64.666%;
     padding: 0 1%;
   }
-
 }
 
 //Big Desktops
@@ -575,16 +592,17 @@ body.archive{
 // Dropdown (min) Menu 
 @media screen and (max-width: 1124px){
   .header{
-    height: 40px !important;
+    height: 70px !important;
     overflow: visible !important;  
     .menu_drop{
       display: inline-block !important;
+      margin-right: 20px !important;
     }
     .block_cntt{
-      line-height: 40px !important;
+      line-height: 70px !important;
     }
     h1 img{
-      width: 50px !important;
+      width: 80px !important;
     }
     .social_wpr,
     .contact_wpr{
@@ -595,7 +613,7 @@ body.archive{
       background: @cB;
       position: absolute;
       left: 0;
-      top: 40px;
+      top: 70px;
       padding: 10px 0 15px;
       overflow: hidden;
       li{

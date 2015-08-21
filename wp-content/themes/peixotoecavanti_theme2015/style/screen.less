@@ -382,7 +382,7 @@ body.header_extended .menu_drop{
   }
   .gallery_wpr{
     position: relative;
-    height: 380px;
+    max-height: 380px;
     margin-top: 20px;
   }
   .office_text{
@@ -771,12 +771,9 @@ body.quem-somos{
     padding-bottom: 200px;
 
     .photo{
-      height: 645px;
+      max-height: 645px;
       overflow: hidden;
     }
-  }
-  .about_cntt{
-    #huge-it-share-buttons-top{display: none;}
   }
   .about_01,
   .about_02{
@@ -859,42 +856,24 @@ body.archive{
     .share_bar{
       padding-top: 25px;
       position: relative;
-      height: 40px;
+      padding-bottom: 30px;
 
+      .button_wpr{
+        display: inline-block;
+      }
       .bar_title{
+        padding-right: 20px;
         display: inline-block;
         color: @cO;
         font-family: @fontSerif;
         vertical-align: middle;
       }
-      .share_buttons{
-        padding-left: 20px;
+      .share_button{
+        padding: 5px 20px 5px 0;
         vertical-align: middle;
         display: inline-block;
         h3{
           display: none;
-        }
-      }
-      .huge-it-share-buttons-list{
-        li a{
-          height: 25px !important;
-          width: 25px !important;
-        }
-        //Face
-        li:nth-child(1) a{
-          background: url(../img/icons/blog-social-face.png) center no-repeat !important;
-        }
-        //Twitter
-        li:nth-child(2) a{
-          background: url(../img/icons/blog-social-twet.png) center no-repeat !important;
-        }
-        //Google +
-        li:nth-child(4) a{
-          background: url(../img/icons/blog-social-plus.png) center no-repeat !important;
-        }
-        //Linked In
-        li:nth-child(5) a{
-          background: url(../img/icons/blog-social-in.png) center no-repeat !important;
         }
       }
     }
@@ -909,25 +888,41 @@ body.archive{
     }
   }
   .pagination{
-    padding: 30px 0 50px;
+    padding: 30px 0 70px;
     text-align: center;
-    a{
-      display: block;
-      height: 34px;
-      width: 34px;
-      overflow: hidden;
-      text-indent: 2000px;
-      color: transparent;
-    }
     .next, .prev{
-      display: inline-block;
-      padding: 0 10px;
+      position: relative;
+      span{
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        top: 25px;
+        color: @cB;
+      }
+      a{
+        display: block;
+        color: #666;
+      }
     }
-    .next a{
-      background: url(../img/icons/pagination-arrow-righ.png) center no-repeat;
+    .next{
+      text-align: right;
+      span{
+        padding-right: 45px;
+      }
+      a{
+        padding: 30px 45px 0 0; 
+        background: url(../img/icons/pagination-arrow-righ.png) top right no-repeat;
+      } 
     }
-    .prev a{
-      background: url(../img/icons/pagination-arrow-left.png) center no-repeat;
+    .prev {
+      text-align: left;
+      span{
+        padding-left: 45px;
+      }
+      a{
+        padding: 30px 0  0 45px; 
+        background: url(../img/icons/pagination-arrow-left.png) top left no-repeat;
+      }
     }
   }
 }
@@ -937,11 +932,7 @@ body.single{
   .blog_wpr{
     .comments{
       padding: 20px 0;
-    }
-    .text{
-      #huge-it-share-buttons-top{
-        display: none;
-      }
+      overflow: hidden;
     }
   }
 }
