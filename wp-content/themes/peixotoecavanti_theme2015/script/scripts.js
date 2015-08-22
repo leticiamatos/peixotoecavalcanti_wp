@@ -63,7 +63,7 @@
 
     // Contact Form Modal 
     $( "#contact_form" ).dialog({
-      autoOpen: true,
+      autoOpen: false,
       modal: true,
       draggable: false,
       resizable: false,

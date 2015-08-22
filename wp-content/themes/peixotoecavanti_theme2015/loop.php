@@ -31,8 +31,8 @@
 		<div class="post">
 			<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 			<div class="info">
-				<span class="date"><?php the_date(); ?> |</span>
-				<span class="author">por <?php the_author_link(); ?></span>
+				<span class="date"><?php the_time('d/m/Y') ?> |</span>
+				<span class="author">por <?php the_author_posts_link(); ?></span>
 			</div>
 			<div class="text">
 				<?php the_excerpt(); ?>
@@ -47,8 +47,8 @@
 	<div class="post">
 		<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 		<div class="info">
-			<span class="date"><?php the_date(); ?> |</span>
-			<span class="author">por <?php the_author_link(); ?></span>
+			<span class="date"><?php the_time('d/m/Y') ?> |</span>
+			<span class="author">por <?php the_author_posts_link(); ?></span>
 		</div>
 		<div class="text">
 			<?php the_excerpt(); ?>
@@ -75,11 +75,8 @@
 			<article class="post">
 				<h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 				<div class="info">
-					<span class="date"><?php the_date(); ?> |</span>
-					<span class="author">
-						por
-						<a href="#"><?php the_author(); ?></a> 
-					</span>
+					<span class="date"><?php the_time('d/m/Y') ?> |</span>
+					<span class="author">por <?php the_author_posts_link(); ?></span>
 
 				</div>
 				<!--div class="share_bar">
@@ -98,9 +95,13 @@
 		<?php endwhile; ?>
 		<!-- end of the loop -->
 
+		<?php $pagination_args = array(
+			'prev_text'          => __('<'),
+			'next_text'          => __('>')
+		); ?>
+
 		<div class="pagination">
-			<div class="next"><?php next_posts_link( 'prox' ); ?></div>
-			<div class="prev"><?php previous_posts_link( 'ant' ); ?></div>
+			<?php echo paginate_links( $pagination_args ); ?>
 		</div>
 
 		<?php wp_reset_postdata(); ?>

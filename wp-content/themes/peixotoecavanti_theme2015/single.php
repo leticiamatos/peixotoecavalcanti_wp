@@ -63,7 +63,7 @@
 						<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5"></div>
 					</div>
 
-					<div class="pagination">
+					<div class="single_pagination">
 						<div class="col1-2">
 							<div class="prev">
 								<span>Artigo Anterior</span>

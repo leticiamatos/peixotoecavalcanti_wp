@@ -5,6 +5,12 @@ Template Name: Search
 ?>
 <?php get_header(); ?>
 
+<?php
+	// Results Count
+	global $wp_query;
+	$total_results = $wp_query->found_posts;
+?>
+
 <!-- BEGINS Blog Search -->
 <section class="block_wpr block_01 block_blog">
 	<div class="block_cntt">
@@ -13,7 +19,10 @@ Template Name: Search
 		</div>
 		<div class="col2-3">
 			<section class="blog_wpr">
-				<div class="col_title"><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></div>
+				<div class="col_title">
+					<?php //echo $total_results; ?>
+					Resultados para "<?php echo get_search_query(); ?>"
+				</div>
 				
 				<div class="post_wpr">
 
@@ -24,9 +33,13 @@ Template Name: Search
 
 					<?php endwhile; ?>
 
+					<?php $pagination_args = array(
+						'prev_text'          => __('<'),
+						'next_text'          => __('>')
+					); ?>
+
 					<div class="pagination">
-						<div class="next"><?php next_posts_link( 'prox' ); ?></div>
-						<div class="prev"><?php previous_posts_link( 'ant' ); ?></div>
+						<?php echo paginate_links( $pagination_args ); ?>
 					</div>
 
 					<?php wp_reset_postdata(); ?>

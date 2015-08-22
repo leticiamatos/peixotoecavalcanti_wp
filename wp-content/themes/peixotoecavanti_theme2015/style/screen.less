@@ -903,6 +903,61 @@ body.archive{
   .pagination{
     padding: 30px 0 70px;
     text-align: center;
+    
+    .page-numbers{
+      display: inline-block;
+      height: 34px;
+      width: 34px;
+      background: #797164;
+      color: @cW;
+      font-family: @fontSans;
+      text-align: center;
+      line-height: 34px;
+      font-size: 15px;
+      margin: 0 2px;
+    }
+    .dots{
+      color: #797164;
+      background: none;
+      width: 30px;
+      margin:0;
+    }
+    .current{
+      background: @cB;
+    }
+    .next{
+      background: transparent url(../img/icons/pagination-arrow-righ.png) center no-repeat;
+      color: transparent;
+      position: relative;
+      left: 0;
+    }
+    .next:hover{
+      left: 3px;
+    }
+    .prev{
+      background: transparent url(../img/icons/pagination-arrow-left.png) center no-repeat;
+      color: transparent;
+      position: relative;
+      right: 0;
+    }
+    .prev:hover{
+      right: 3px;
+    }
+  }
+}
+
+
+// Single 
+body.single{
+  .blog_wpr{
+    .comments{
+      padding: 20px 0;
+      overflow: hidden;
+    }
+  }
+  .single_pagination{
+    padding: 30px 0 70px;
+    text-align: center;
     .next, .prev{
       position: relative;
       span{
@@ -936,16 +991,6 @@ body.archive{
         padding: 30px 0  0 45px; 
         background: url(../img/icons/pagination-arrow-left.png) top left no-repeat;
       }
-    }
-  }
-}
-
-// Single 
-body.single{
-  .blog_wpr{
-    .comments{
-      padding: 20px 0;
-      overflow: hidden;
     }
   }
 }
