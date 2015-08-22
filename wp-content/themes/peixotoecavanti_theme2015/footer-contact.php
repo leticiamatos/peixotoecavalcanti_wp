@@ -55,7 +55,14 @@
 <div id="contact_form">
 
 	<div class="form_contt">
-		<?php echo do_shortcode('[contact-form-7 id="118" title="Fale Conosco"]'); ?>
+		<?php echo do_shortcode('[contact-form-7 id="127" title="Fale Conosco"]'); ?>
+		<?php //echo do_shortcode('[contact-form-7 id="178" title="Fale Conosco_copy"]'); ?>
+
+		<span class="clear"></span>
+		<div class="obs">
+			*Nós nunca divulgamos seu e-mail para terceiros, e não enviamos SPAM de qualquer natureza.
+		</div>
+
 
 		<!--form>
 			<div class="col1-2">
@@ -71,23 +78,26 @@
 				<div class="div_form posi">
 					<input type="text" class="txt" placeholder="Cargo" />
 				</div>
-				<div class="phone_info">
-					<span class="label">Ou ligue:</span>
-					<span class="ico"></span>
-					<span class="number">(61) 3033-6464</span>
-				</div>
 			</div>
 			<div class="col1-2">
 				<div class="div_form msg">
 					<textarea class="txt" placeholder="Mensagem"></textarea>
 				</div>
+			</div>
+			<span class="clear"></span>
+			<div class="col1-2">
+				<div class="phone_info">
+					<div class="label">Ou ligue:<div>
+					<div class="ico"></div>
+					<div class="number">(61) 3033-6464</div>
+				</div>
+			</div>
+			<div class="col1-2">
 				<div class="buttons">
 					<input type="button" class="btn" value="Enviar" />
 				</div>
 			</div>
-			<div class="obs">
-				*Nós nunca divulgamos seu e-mail para terceiros, e não enviamos SPAM de qualquer natureza.
-			</div>
 		</form-->
+
 	</div>  
 </div>

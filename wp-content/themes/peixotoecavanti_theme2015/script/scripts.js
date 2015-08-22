@@ -63,11 +63,13 @@
 
     // Contact Form Modal 
     $( "#contact_form" ).dialog({
-      autoOpen: false,
+      autoOpen: true,
       modal: true,
       draggable: false,
       resizable: false,
-      width: 970
+      width: 'auto', // overcomes width:'auto' and maxWidth bug
+      maxWidth: 980,
+      fluid: true
     });
     $( ".contact_link" ).click(function() {
       $( "#contact_form" ).dialog( "open" );
