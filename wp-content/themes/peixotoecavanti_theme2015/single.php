@@ -17,14 +17,13 @@
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 				<!-- article -->
-				<?php //_e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h2 class="title"><?php the_title(); ?></h2>
 					<div class="info">
 						<span class="date"><?php the_date(); ?> |</span>
 						<span class="author">
 							por
-							<a href="#"><?php the_author(); ?></a> 
+							<?php the_author_posts_link(); ?>
 						</span>
 
 					</div>
@@ -59,6 +58,26 @@
 						</div>
 
 					</div>
+
+					<div class="author_wpr">
+						<?php 
+						// get Author Object
+						$post_id = get_queried_object_id();
+						$post_author_id = get_post_field( 'post_author', $post_id );
+						?>
+
+						<p class="photo_wpr">
+							<?php 
+								echo get_avatar( $post_author_id); 
+								?> 
+						</p>
+						<p class="name"><?php the_author_posts_link(); ?></p>
+						<div class="descpt">
+							<?php echo get_the_author_meta('description', $post_author_id); ?>
+						</div>
+					</div>
+
+
 					<div class="comments">
 						<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5"></div>
 					</div>

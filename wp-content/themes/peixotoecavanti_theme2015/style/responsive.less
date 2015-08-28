@@ -282,6 +282,7 @@ body.archive{
     }
   }
   .contact_list {
+    font-size: 11px;
     padding-left: 0;
     text-align: center;
     span{
@@ -420,7 +421,10 @@ body.archive{
     .about_01,
     .about_02{
       .photo{
-        max-width: 480px;
+        text-align: center;
+        img{
+          max-width: 480px;
+        }        
       }
       h3{
         font-size: 23px;
@@ -564,6 +568,24 @@ body.archive{
 
 }
 
+// Quem Somos - About - Columns height
+@media screen and (max-width: 729px){
+  body.quem-somos {
+    .colnopad1-2{
+      height: auto !important;
+    }
+  }
+}
+@media screen and (min-width: 730px)  and (max-width: 1029px){
+  body.quem-somos {
+    .about_01 {
+      width: 650px;
+    }
+    .colnopad1-2{
+      height: 467px !important;
+    }
+  }
+}
 
 // Dropdown (extended) Menu
 @media screen and (max-width: 890px){

@@ -140,6 +140,7 @@ body{
   top: 0;
   left: 0;
   overflow: hidden;
+  width: 100%;
   height: 0;
   .transition;
   .shadow;
@@ -306,6 +307,9 @@ body.header_extended .menu_drop{
   margin: 0 auto;
   color: @cB2;
   position: relative;
+  a{
+    color: @cB2;
+  }
   li{
     margin-bottom: 20px;
   }
@@ -444,6 +448,7 @@ body.header_extended .menu_drop{
       overflow: auto;
       padding: 5px 5px 20px;
       border-bottom: 2px solid @cO;
+      text-align: justify;
     }
   }
 }
@@ -681,6 +686,7 @@ body.header_extended .menu_drop{
 .ui-dialog{
   background: url(../img/z_lixo/fale_conosco.jpg) center no-repeat;
 }
+
 .form_contt{
   color: @cB;
   .txt{
@@ -711,6 +717,29 @@ body.header_extended .menu_drop{
   textarea{
     height: 223px;
   }
+  // Placeholder
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    padding-left: 45px;
+    text-indent: 0;
+  }
+  input::-moz-placeholder ,
+  textarea::-moz-placeholder {
+    padding-left: 45px;
+    text-indent: 0;
+  }
+  input:-moz-placeholder ,
+  textarea:-moz-placeholder {
+    padding-left: 45px;
+    text-indent: 0;
+  }
+  input:-ms-input-placeholder ,
+  textarea:-ms-input-placeholder { 
+    padding-left: 45px;
+    text-indent: 0;
+  }
+
+
   .phone_info{
     padding-top: 10px;
     text-align: center;
@@ -781,7 +810,7 @@ body.quem-somos{
 
   .block_about{
     background: none;
-    padding-bottom: 200px;
+    padding-bottom: 70px;
 
     .photo{
       max-height: 645px;
@@ -797,7 +826,11 @@ body.quem-somos{
     h3{
       padding: 0 30px;
     }
-
+    strong{
+      em{
+        color: @cO;
+      }
+    }
   }
   .about_part01,
   .about_part02{
@@ -893,6 +926,7 @@ body.archive{
     .text{
       padding-top: 15px;
       padding-bottom: 30px;
+      text-align: justify;
 
       .view-article{
         color: @cO;
@@ -953,6 +987,34 @@ body.single{
     .comments{
       padding: 20px 0;
       overflow: hidden;
+    }
+    .text{
+      overflow: hidden;
+      img.size-full{
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+    .author_wpr{
+      border-top: 1px solid #aaa;
+      padding-top: 40px;
+      .photo_wpr{
+        float: left;
+        display: inline-block;
+        margin: 0 20px 20px 0;
+      }
+      .name{
+        font-size: 15px;
+        text-transform: uppercase;
+        a{
+          color: @cO;
+        }
+      }
+      .descpt{
+        padding-top: 10px;
+        color: @cGa;
+        font-size: 13px;
+      }
     }
   }
   .single_pagination{
@@ -1028,6 +1090,24 @@ body.single{
       padding: 5px;
       border: none;
     }
+    // Placeholder
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+      opacity: 1;
+    }
+    input::-moz-placeholder ,
+    textarea::-moz-placeholder {
+      opacity: 1;
+    }
+    input:-moz-placeholder ,
+    textarea:-moz-placeholder {
+      opacity: 1;
+    }
+    input:-ms-input-placeholder ,
+    textarea:-ms-input-placeholder { 
+      opacity: 1;
+    }
+
     .btn{
       background: url(../img/icons/sidebar_seach.png) center no-repeat;
       overflow: hidden;
