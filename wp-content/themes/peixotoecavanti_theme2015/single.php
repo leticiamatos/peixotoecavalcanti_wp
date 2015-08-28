@@ -85,14 +85,18 @@
 					<div class="single_pagination">
 						<div class="col1-2">
 							<div class="prev">
-								<span>Artigo Anterior</span>
-								<?php previous_post_link('%link'); ?>  
+								<?php if (get_previous_post_link()){ ?>
+									<span>Artigo Anterior</span>
+									<?php previous_post_link('%link'); ?>  
+								<?php } ?>
 							</div> 
 						</div>
 						<div class="col1-2">
 							<div class="next">
-								<span>Próximo Artigo</span>
-								<?php next_post_link('%link'); ?>  
+								<?php if (get_next_post_link()){ ?>
+									<span>Próximo Artigo</span>
+									<?php next_post_link('%link'); ?>  
+								<?php } ?>
 							</div>
 						</div>
 						<span class="clear"></span>
