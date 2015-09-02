@@ -702,3 +702,35 @@ body.archive{
     width: 980px;
   } 
 }
+
+// Office Photos/ Imgs
+@media screen and (max-width:729px){
+  .block_office .img_01,
+  .block_office .img_02{
+    text-align: center;
+    img{
+      position: static !important;
+      width: 100%;
+      max-width: 450px;
+    }
+    .img_sta{
+      display: none;
+    }
+  }
+  .block_office .img_01{
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width:730px) {
+  .block_office .img_01,
+  .block_office .img_02{
+    img{
+      width: 115%;
+      max-width: 587px;
+    }
+  }
+  .block_office .text_01{
+    padding-top: 30px;
+  }
+} 
+

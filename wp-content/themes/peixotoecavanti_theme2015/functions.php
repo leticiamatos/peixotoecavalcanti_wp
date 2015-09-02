@@ -505,8 +505,15 @@ function socialMenu(){
 
     // O Escritório
     $pg_escr = 6;
-    // Fotos Escritório
-    $pg_eimg = 64;
+    // Galeria Carousel de Fotos Escritório
+    //$pg_eimg = 64;
+    // Foto escritório 01
+    //$pg_eimg1 = 139;
+    $pg_eimg1 = 199;
+    // Foto escritório 02
+    //$pg_eimg2 = 142;
+    $pg_eimg2 = 203;
+
     // O Escritório – texto incial
     $pg_esci = 9;
     // Nossos Valores

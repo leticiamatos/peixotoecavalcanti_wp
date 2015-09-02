@@ -42,13 +42,21 @@
 		</p>
 	</div>
 
-	<div id="carousel" class="gallery_wpr">
-		<?php createGallery( $pg_eimg );  ?> 
-	</div>
+	<!--div id="carousel" class="gallery_wpr">
+		<?php //createGallery( $pg_eimg );  ?> 
+	</div-->
 
 	<div class="block_cntt">
 		<div class="office_text">
 			<div class="col1-2">
+				<div class="img_01">
+					<p class="img_abs">
+						<?php postContent( $pg_eimg1); ?>
+					</p>
+					<p class="img_sta">
+						<?php postContent( $pg_eimg1); ?>
+					</p>
+				</div>
 				<div class="text_01">
 					<?php postContent( $pg_esci); ?>
 				</div>
@@ -65,6 +73,14 @@
 				<h3><?php postTitle( $pg_expe); ?></h3>
 				<div class="text_02">
 					<?php postContent( $pg_expe); ?>
+				</div>
+				<div class="img_02">
+					<p class="img_abs">
+						<?php postContent( $pg_eimg2); ?>
+					</p>
+					<p class="img_sta">
+						<?php postContent( $pg_eimg2); ?>
+					</p>
 				</div>
 			</div>
 		</div>
