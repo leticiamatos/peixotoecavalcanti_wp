@@ -1,6 +1,6 @@
 (function ($, root, undefined) {
-	  // Responsive debugger script
-  $(document).ready(function(){
+	// Responsive debugger script
+  /*$(document).ready(function(){
     var MEASUREMENTS_ID = 'measurements'; // abstracted-out for convenience in renaming
     $("body").append('<div id="'+MEASUREMENTS_ID+'"></div>');
     $("#"+MEASUREMENTS_ID).css({
@@ -21,7 +21,8 @@
         $("#"+MEASUREMENTS_ID).text(getDimensions());
     });
   });
-
+  */
+  
 	$(function () {
     $( "#accordion_01" ).accordion({
       active: false,

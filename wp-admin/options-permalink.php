@@ -143,7 +143,7 @@ if ( $wp_rewrite->using_index_permalinks() )
 else
 	$usingpi = false;
 
-flush_rewrite_rules();
+//flush_rewrite_rules();
 
 require( ABSPATH . 'wp-admin/admin-header.php' );
 
@@ -284,5 +284,4 @@ printf( __('If you like, you may enter custom structures for your category and t
 <?php } // multisite ?>
 
 </div>
-
 <?php require( ABSPATH . 'wp-admin/admin-footer.php' ); ?>

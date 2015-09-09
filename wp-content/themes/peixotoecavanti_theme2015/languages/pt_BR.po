@@ -114,7 +114,7 @@ msgstr "Área do Widget 2"
 
 #: ../functions.php:333
 msgid "View Article"
-msgstr "Ver artigo"
+msgstr "Ver texto"
 
 #: ../functions.php:438 ../functions.php:439
 msgid "HTML5 Blank Custom Post"
